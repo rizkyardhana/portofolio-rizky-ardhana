@@ -18,6 +18,16 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            try {
+                const theme = localStorage.getItem('portfolio-theme');
+                if (theme === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) { }
+        })();
+    </script>
 </head>
 
 <body>
@@ -41,11 +51,17 @@
                 <li><a href="#faq" class="nav-link">FAQ</a></li>
                 <li><a href="#contact" class="nav-link">Kontak</a></li>
             </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Ganti mode terang/gelap"
+                    title="Mode Terang / Gelap">
+                    <i class="fas fa-sun" id="themeIcon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -150,13 +166,19 @@
                     </div>
                 </div>
                 <div class="about-text" data-animate="fade-left">
-                    <h3 class="about-heading">Full Stack Web Developer &amp; <span class="gradient-text">Software Engineer</span>
+                    <h3 class="about-heading">Full Stack Web Developer &amp; <span class="gradient-text">Software
+                            Engineer</span>
                     </h3>
                     <p class="about-description">
-                        Mahasiswa Teknik Informatika yang berdedikasi sebagai <strong>Full Stack Web Developer</strong>, <strong>Software Engineer</strong>, dan <strong>Programmer</strong>. Menguasai alur rekayasa web secara komprehensif mulai dari <strong>Frontend &amp; Backend</strong>, integrasi database, arsitektur RESTful API, hingga penerapan clean code dan performa tinggi.
+                        Mahasiswa Teknik Informatika yang berdedikasi sebagai <strong>Full Stack Web Developer</strong>,
+                        <strong>Software Engineer</strong>, dan <strong>Programmer</strong>. Menguasai alur rekayasa web
+                        secara komprehensif mulai dari <strong>Frontend &amp; Backend</strong>, integrasi database,
+                        arsitektur RESTful API, hingga penerapan clean code dan performa tinggi.
                     </p>
                     <p class="about-description">
-                        Berpengalaman memimpin tim teknis sebagai Co-Founder &amp; CTO di Bariz, serta memiliki kepedulian tinggi terhadap aksesibilitas web dan inklusivitas digital. Siap menghadirkan solusi software &amp; web development berkualitas tinggi untuk skala startup maupun korporasi.
+                        Berpengalaman memimpin tim teknis sebagai Co-Founder &amp; CTO di Bariz, serta memiliki
+                        kepedulian tinggi terhadap aksesibilitas web dan inklusivitas digital. Siap menghadirkan solusi
+                        software &amp; web development berkualitas tinggi untuk skala startup maupun korporasi.
                     </p>
                     <div class="about-details">
                         <div class="detail-item">
@@ -250,7 +272,8 @@
                         <span class="bento-badge highlight">Social Impact</span>
                     </div>
                     <h4 class="bento-title">Inklusivitas &amp; Aksesibilitas</h4>
-                    <p class="bento-subtext">Pengajar Bahasa Isyarat Indonesia (BISINDO) &amp; arsitek platform arsip digital Garda BISINDO untuk komunitas Tuli.</p>
+                    <p class="bento-subtext">Pengajar Bahasa Isyarat Indonesia (BISINDO) &amp; arsitek platform arsip
+                        digital Garda BISINDO untuk komunitas Tuli.</p>
                     <div class="inclusive-tag">
                         <i class="fas fa-universal-access"></i> Standar Web Aksesibel (WCAG)
                     </div>
@@ -376,7 +399,8 @@
                 <span class="section-tag">&lt;layanan/&gt;</span>
                 <h2 class="section-title">Solusi & Layanan Web</h2>
                 <div class="section-line"></div>
-                <p class="section-subtitle">Layanan pembuatan website profesional berorientasi hasil untuk meningkatkan kredibilitas & penjualan bisnis Anda</p>
+                <p class="section-subtitle">Layanan pembuatan website profesional berorientasi hasil untuk meningkatkan
+                    kredibilitas & penjualan bisnis Anda</p>
             </div>
             <div class="services-grid">
                 <!-- Service 1 -->
@@ -386,14 +410,16 @@
                         <i class="fas fa-building"></i>
                     </div>
                     <h3 class="service-title">Company Profile Website</h3>
-                    <p class="service-desc">Website profil perusahaan berkelas dan modern untuk memperkuat identitas brand, membangun kepercayaan klien B2B, dan meningkatkan daya saing pasar.</p>
+                    <p class="service-desc">Website profil perusahaan berkelas dan modern untuk memperkuat identitas
+                        brand, membangun kepercayaan klien B2B, dan meningkatkan daya saing pasar.</p>
                     <ul class="service-features">
                         <li><i class="fas fa-check-circle"></i> Desain Eksklusif & Custom Branding</li>
                         <li><i class="fas fa-check-circle"></i> Responsif Sempurna di Smartphone & Laptop</li>
                         <li><i class="fas fa-check-circle"></i> Terstruktur SEO & Cepat Diakses (Fast Loading)</li>
                         <li><i class="fas fa-check-circle"></i> Integrasi Layanan, Tim, Portofolio & Kontak</li>
                     </ul>
-                    <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20konsultasi%20pembuatan%20Website%20Company%20Profile." target="_blank" rel="noopener" class="service-btn">
+                    <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20konsultasi%20pembuatan%20Website%20Company%20Profile."
+                        target="_blank" rel="noopener" class="service-btn">
                         <span>Konsultasi Proyek Ini</span>
                         <i class="fab fa-whatsapp"></i>
                     </a>
@@ -406,14 +432,16 @@
                         <i class="fas fa-rocket"></i>
                     </div>
                     <h3 class="service-title">High-Converting Landing Page</h3>
-                    <p class="service-desc">Halaman penjualan satu halaman yang difokuskan khusus untuk konversi iklan (Meta/Google Ads), kampanye produk, dan penangkapan prospek calon pembeli.</p>
+                    <p class="service-desc">Halaman penjualan satu halaman yang difokuskan khusus untuk konversi iklan
+                        (Meta/Google Ads), kampanye produk, dan penangkapan prospek calon pembeli.</p>
                     <ul class="service-features">
                         <li><i class="fas fa-check-circle"></i> Kecepatan Super Ringan (&lt; 2 Detik)</li>
                         <li><i class="fas fa-check-circle"></i> Struktur Copywriting Persuasif & Call-to-Action</li>
                         <li><i class="fas fa-check-circle"></i> Direct WhatsApp Order & Lead Form</li>
                         <li><i class="fas fa-check-circle"></i> Siap Pasang Meta Pixel & Google Analytics</li>
                     </ul>
-                    <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20konsultasi%20pembuatan%20Landing%20Page." target="_blank" rel="noopener" class="service-btn">
+                    <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20konsultasi%20pembuatan%20Landing%20Page."
+                        target="_blank" rel="noopener" class="service-btn">
                         <span>Konsultasi Proyek Ini</span>
                         <i class="fab fa-whatsapp"></i>
                     </a>
@@ -426,14 +454,16 @@
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3 class="service-title">Aplikasi Web & Sistem Kustom</h3>
-                    <p class="service-desc">Pengembangan website interaktif dengan sistem manajemen dinamis, integrasi database, atau dashboard admin sesuai kebutuhan alur bisnis Anda.</p>
+                    <p class="service-desc">Pengembangan website interaktif dengan sistem manajemen dinamis, integrasi
+                        database, atau dashboard admin sesuai kebutuhan alur bisnis Anda.</p>
                     <ul class="service-features">
                         <li><i class="fas fa-check-circle"></i> Arsitektur Clean Code & Skalabilitas Tinggi</li>
                         <li><i class="fas fa-check-circle"></i> Dashboard Admin & Manajemen Data</li>
                         <li><i class="fas fa-check-circle"></i> Integrasi API Eksternal & Basis Data Modern</li>
                         <li><i class="fas fa-check-circle"></i> Keamanan Teruji & Proteksi Data</li>
                     </ul>
-                    <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20konsultasi%20pembuatan%20Aplikasi%20Web%20Kustom." target="_blank" rel="noopener" class="service-btn">
+                    <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20konsultasi%20pembuatan%20Aplikasi%20Web%20Kustom."
+                        target="_blank" rel="noopener" class="service-btn">
                         <span>Konsultasi Proyek Ini</span>
                         <i class="fab fa-whatsapp"></i>
                     </a>
@@ -446,14 +476,16 @@
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
                     <h3 class="service-title">Redesign & Speed Optimization</h3>
-                    <p class="service-desc">Modernisasi tampilan website yang sudah ketinggalan zaman menjadi kekinian dan elegan, sekaligus perbaikan skor performa loading yang lambat.</p>
+                    <p class="service-desc">Modernisasi tampilan website yang sudah ketinggalan zaman menjadi kekinian
+                        dan elegan, sekaligus perbaikan skor performa loading yang lambat.</p>
                     <ul class="service-features">
                         <li><i class="fas fa-check-circle"></i> Desain Visual UI/UX Baru yang Lebih Menawan</li>
                         <li><i class="fas fa-check-circle"></i> Optimasi Core Web Vitals & Google PageSpeed</li>
                         <li><i class="fas fa-check-circle"></i> Perbaikan Tampilan Responsif Smartphone</li>
                         <li><i class="fas fa-check-circle"></i> Pembersihan Skrip & Efisiensi Aset Media</li>
                     </ul>
-                    <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20konsultasi%20Redesign%20dan%20Optimasi%20Website." target="_blank" rel="noopener" class="service-btn">
+                    <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20konsultasi%20Redesign%20dan%20Optimasi%20Website."
+                        target="_blank" rel="noopener" class="service-btn">
                         <span>Konsultasi Proyek Ini</span>
                         <i class="fab fa-whatsapp"></i>
                     </a>
@@ -653,7 +685,8 @@
                 <span class="section-tag">&lt;proses/&gt;</span>
                 <h2 class="section-title">Alur Kerja Transparan</h2>
                 <div class="section-line"></div>
-                <p class="section-subtitle">4 tahapan terstruktur & profesional untuk mewujudkan website bisnis Anda dari ide hingga online</p>
+                <p class="section-subtitle">4 tahapan terstruktur & profesional untuk mewujudkan website bisnis Anda
+                    dari ide hingga online</p>
             </div>
             <div class="process-grid">
                 <!-- Step 1 -->
@@ -663,7 +696,8 @@
                         <i class="fas fa-comments"></i>
                     </div>
                     <h3 class="process-title">Konsultasi & Discovery</h3>
-                    <p class="process-desc">Diskusi mendalam mengenai tujuan bisnis, profil target audiens, fitur yang dibutuhkan, serta estimasi timeline dan anggaran yang transparan tanpa biaya tersembunyi.</p>
+                    <p class="process-desc">Diskusi mendalam mengenai tujuan bisnis, profil target audiens, fitur yang
+                        dibutuhkan, serta estimasi timeline dan anggaran yang transparan tanpa biaya tersembunyi.</p>
                 </div>
 
                 <!-- Step 2 -->
@@ -673,7 +707,8 @@
                         <i class="fas fa-layer-group"></i>
                     </div>
                     <h3 class="process-title">Desain UI/UX & Konsep</h3>
-                    <p class="process-desc">Perancangan tata letak visual, palet warna, dan prototipe antarmuka yang modern dan elegan. Memastikan alur navigasi intuitif sebelum implementasi kode dimulai.</p>
+                    <p class="process-desc">Perancangan tata letak visual, palet warna, dan prototipe antarmuka yang
+                        modern dan elegan. Memastikan alur navigasi intuitif sebelum implementasi kode dimulai.</p>
                 </div>
 
                 <!-- Step 3 -->
@@ -683,7 +718,8 @@
                         <i class="fas fa-code"></i>
                     </div>
                     <h3 class="process-title">Coding & Pengembangan</h3>
-                    <p class="process-desc">Implementasi kode bersih (clean code) berstandar modern, animasi mikro yang interaktif, integrasi sistem, dan optimasi responsif di seluruh tipe gadget.</p>
+                    <p class="process-desc">Implementasi kode bersih (clean code) berstandar modern, animasi mikro yang
+                        interaktif, integrasi sistem, dan optimasi responsif di seluruh tipe gadget.</p>
                 </div>
 
                 <!-- Step 4 -->
@@ -693,7 +729,8 @@
                         <i class="fas fa-rocket"></i>
                     </div>
                     <h3 class="process-title">Testing, Launch & Garansi</h3>
-                    <p class="process-desc">Pengujian performa & bebas bug, setup domain dan hosting, peluncuran website resmi ke publik, disertai garansi maintenance dan panduan operasional.</p>
+                    <p class="process-desc">Pengujian performa & bebas bug, setup domain dan hosting, peluncuran website
+                        resmi ke publik, disertai garansi maintenance dan panduan operasional.</p>
                 </div>
             </div>
         </div>
@@ -706,35 +743,40 @@
                 <span class="section-tag">&lt;keunggulan/&gt;</span>
                 <h2 class="section-title">Mengapa Memilih Saya?</h2>
                 <div class="section-line"></div>
-                <p class="section-subtitle">Nilai tambah dan standar profesional tinggi yang saya hadirkan di setiap baris kode</p>
+                <p class="section-subtitle">Nilai tambah dan standar profesional tinggi yang saya hadirkan di setiap
+                    baris kode</p>
             </div>
             <div class="why-grid">
                 <div class="why-card" data-animate="fade-up" data-delay="100">
                     <div class="why-icon"><i class="fas fa-code"></i></div>
                     <div class="why-card-content">
                         <h3>Clean Code &amp; Skalabilitas</h3>
-                        <p>Kode dirancang modular, berstruktur rapi, dan mudah dikembangkan di masa depan tanpa membuat website lambat atau sulit dimaintain.</p>
+                        <p>Kode dirancang modular, berstruktur rapi, dan mudah dikembangkan di masa depan tanpa membuat
+                            website lambat atau sulit dimaintain.</p>
                     </div>
                 </div>
                 <div class="why-card" data-animate="fade-up" data-delay="200">
                     <div class="why-icon"><i class="fas fa-universal-access"></i></div>
                     <div class="why-card-content">
                         <h3>Inklusif &amp; Standar WCAG</h3>
-                        <p>Spesialis dalam web accessibility — memastikan website Anda nyaman dinavigasi oleh seluruh pengunjung termasuk penyandang disabilitas.</p>
+                        <p>Spesialis dalam web accessibility — memastikan website Anda nyaman dinavigasi oleh seluruh
+                            pengunjung termasuk penyandang disabilitas.</p>
                     </div>
                 </div>
                 <div class="why-card" data-animate="fade-up" data-delay="300">
                     <div class="why-icon"><i class="fas fa-chart-line"></i></div>
                     <div class="why-card-content">
                         <h3>CTO &amp; Mindset Bisnis</h3>
-                        <p>Berpengalaman memimpin teknologi di Bariz. Saya tidak hanya sekadar coding, namun memikirkan konversi, branding, dan tujuan bisnis Anda.</p>
+                        <p>Berpengalaman memimpin teknologi di Bariz. Saya tidak hanya sekadar coding, namun memikirkan
+                            konversi, branding, dan tujuan bisnis Anda.</p>
                     </div>
                 </div>
                 <div class="why-card" data-animate="fade-up" data-delay="400">
                     <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
                     <div class="why-card-content">
                         <h3>Transparansi &amp; Garansi Purna Jual</h3>
-                        <p>Komunikasi berkala, estimasi waktu yang ditepati, tanpa biaya tersembunyi, serta garansi perbaikan bug setelah website online.</p>
+                        <p>Komunikasi berkala, estimasi waktu yang ditepati, tanpa biaya tersembunyi, serta garansi
+                            perbaikan bug setelah website online.</p>
                     </div>
                 </div>
             </div>
@@ -748,7 +790,8 @@
                 <span class="section-tag">&lt;keahlian/&gt;</span>
                 <h2 class="section-title">Keahlian Teknis &amp; IT Competencies</h2>
                 <div class="section-line"></div>
-                <p class="section-subtitle">Kompetensi menyeluruh dalam Full Stack Web Development, Software Engineering, Frontend &amp; Backend, dan rekayasa perangkat lunak modern</p>
+                <p class="section-subtitle">Kompetensi menyeluruh dalam Full Stack Web Development, Software
+                    Engineering, Frontend &amp; Backend, dan rekayasa perangkat lunak modern</p>
             </div>
 
             <!-- Core IT Roles Badges -->
@@ -957,7 +1000,8 @@
                         <span class="skill-tag"><i class="fab fa-figma"></i> Figma (UI/UX)</span>
                         <span class="skill-tag"><i class="fas fa-universal-access"></i> Web Accessibility (WCAG)</span>
                         <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Mobile-First Approach</span>
-                        <span class="skill-tag"><i class="fas fa-drafting-compass"></i> Wireframing &amp; Prototype</span>
+                        <span class="skill-tag"><i class="fas fa-drafting-compass"></i> Wireframing &amp;
+                            Prototype</span>
                         <span class="skill-tag"><i class="fas fa-swatchbook"></i> Design Systems</span>
                         <span class="skill-tag"><i class="fas fa-users-cog"></i> Technical Leadership (CTO)</span>
                         <span class="skill-tag"><i class="fas fa-comments"></i> Komunikasi &amp; Kolaborasi</span>
@@ -1066,13 +1110,15 @@
                 <span class="section-tag">&lt;faq/&gt;</span>
                 <h2 class="section-title">Pertanyaan Umum (FAQ)</h2>
                 <div class="section-line"></div>
-                <p class="section-subtitle">Jawaban seputar hal-hal yang sering ditanyakan klien sebelum memulai proyek website</p>
+                <p class="section-subtitle">Jawaban seputar hal-hal yang sering ditanyakan klien sebelum memulai proyek
+                    website</p>
             </div>
             <div class="faq-list">
                 <!-- FAQ 1 -->
                 <div class="faq-item" data-animate="fade-up" data-delay="100">
                     <button class="faq-question" aria-expanded="false">
-                        <span class="faq-q-text"><i class="fas fa-question-circle"></i> Berapa lama waktu yang dibutuhkan untuk membuat website?</span>
+                        <span class="faq-q-text"><i class="fas fa-question-circle"></i> Berapa lama waktu yang
+                            dibutuhkan untuk membuat website?</span>
                         <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
@@ -1081,7 +1127,8 @@
                             <ul>
                                 <li><strong>Landing Page:</strong> Rata-rata 3 – 5 hari kerja.</li>
                                 <li><strong>Company Profile:</strong> Rata-rata 1 – 2 minggu kerja.</li>
-                                <li><strong>Aplikasi Web Kustom:</strong> Disesuaikan dengan cakupan fitur yang disepakati (biasanya 2 – 4 minggu).</li>
+                                <li><strong>Aplikasi Web Kustom:</strong> Disesuaikan dengan cakupan fitur yang
+                                    disepakati (biasanya 2 – 4 minggu).</li>
                             </ul>
                             <p>Saya selalu mengutamakan ketepatan waktu dengan laporan perkembangan berkala.</p>
                         </div>
@@ -1091,12 +1138,15 @@
                 <!-- FAQ 2 -->
                 <div class="faq-item" data-animate="fade-up" data-delay="150">
                     <button class="faq-question" aria-expanded="false">
-                        <span class="faq-q-text"><i class="fas fa-mobile-alt"></i> Apakah website dijamin responsif di smartphone dan tablet?</span>
+                        <span class="faq-q-text"><i class="fas fa-mobile-alt"></i> Apakah website dijamin responsif di
+                            smartphone dan tablet?</span>
                         <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>Ya, tentu saja! Semua website dibangun dengan prinsip <em>mobile-first responsive design</em>. Tampilan dan fungsionalitasnya dipastikan sempurna saat diakses dari smartphone, tablet, laptop, hingga layar monitor besar.</p>
+                            <p>Ya, tentu saja! Semua website dibangun dengan prinsip <em>mobile-first responsive
+                                    design</em>. Tampilan dan fungsionalitasnya dipastikan sempurna saat diakses dari
+                                smartphone, tablet, laptop, hingga layar monitor besar.</p>
                         </div>
                     </div>
                 </div>
@@ -1104,12 +1154,15 @@
                 <!-- FAQ 3 -->
                 <div class="faq-item" data-animate="fade-up" data-delay="200">
                     <button class="faq-question" aria-expanded="false">
-                        <span class="faq-q-text"><i class="fas fa-server"></i> Bagaimana jika saya belum memiliki domain dan hosting?</span>
+                        <span class="faq-q-text"><i class="fas fa-server"></i> Bagaimana jika saya belum memiliki domain
+                            dan hosting?</span>
                         <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>Tidak perlu bingung. Saya siap membantu Anda dari nol mulai dari memilih nama domain yang tepat (.com, .id, dll.), pemilihan provider hosting berkecepatan tinggi, hingga konfigurasi SSL (keamanan HTTPS) sampai website online aktif.</p>
+                            <p>Tidak perlu bingung. Saya siap membantu Anda dari nol mulai dari memilih nama domain yang
+                                tepat (.com, .id, dll.), pemilihan provider hosting berkecepatan tinggi, hingga
+                                konfigurasi SSL (keamanan HTTPS) sampai website online aktif.</p>
                         </div>
                     </div>
                 </div>
@@ -1117,12 +1170,15 @@
                 <!-- FAQ 4 -->
                 <div class="faq-item" data-animate="fade-up" data-delay="250">
                     <button class="faq-question" aria-expanded="false">
-                        <span class="faq-q-text"><i class="fas fa-shield-alt"></i> Apakah ada garansi dan revisi jika ada hal yang kurang cocok?</span>
+                        <span class="faq-q-text"><i class="fas fa-shield-alt"></i> Apakah ada garansi dan revisi jika
+                            ada hal yang kurang cocok?</span>
                         <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>Pasti ada! Setiap paket proyek mencakup kesempatan revisi desain hingga sesuai ekspektasi Anda, serta garansi pemeliharaan (maintenance) setelah website meluncur untuk menangani jika ada kendala teknis.</p>
+                            <p>Pasti ada! Setiap paket proyek mencakup kesempatan revisi desain hingga sesuai ekspektasi
+                                Anda, serta garansi pemeliharaan (maintenance) setelah website meluncur untuk menangani
+                                jika ada kendala teknis.</p>
                         </div>
                     </div>
                 </div>
@@ -1130,12 +1186,15 @@
                 <!-- FAQ 5 -->
                 <div class="faq-item" data-animate="fade-up" data-delay="300">
                     <button class="faq-question" aria-expanded="false">
-                        <span class="faq-q-text"><i class="fas fa-wallet"></i> Bagaimana sistem pembayaran dan tahapan kerjasamanya?</span>
+                        <span class="faq-q-text"><i class="fas fa-wallet"></i> Bagaimana sistem pembayaran dan tahapan
+                            kerjasamanya?</span>
                         <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            <p>Sistem pembayaran dilakukan secara transparan dan aman dengan skema Down Payment (DP) 50% saat proyek dimulai dan pelunasan 50% setelah website selesai diuji coba dan disetujui untuk peluncuran resmi.</p>
+                            <p>Sistem pembayaran dilakukan secara transparan dan aman dengan skema Down Payment (DP) 50%
+                                saat proyek dimulai dan pelunasan 50% setelah website selesai diuji coba dan disetujui
+                                untuk peluncuran resmi.</p>
                         </div>
                     </div>
                 </div>
@@ -1153,9 +1212,11 @@
                         <i class="fas fa-bolt"></i> Siap Melangkah ke Level Berikutnya
                     </div>
                     <h2 class="cta-banner-title">Punya Ide Proyek atau Ingin Meningkatkan Penjualan Bisnis Anda?</h2>
-                    <p class="cta-banner-desc">Mari diskusikan kebutuhan website Anda. Dapatkan konsultasi gratis & solusi pengembangan web yang tepat sasaran, berestetika tinggi, dan cepat diakses.</p>
+                    <p class="cta-banner-desc">Mari diskusikan kebutuhan website Anda. Dapatkan konsultasi gratis &
+                        solusi pengembangan web yang tepat sasaran, berestetika tinggi, dan cepat diakses.</p>
                     <div class="cta-banner-actions">
-                        <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20ingin%20konsultasi%20mengenai%20proyek%20website%20untuk%20bisnis%20saya." target="_blank" rel="noopener" class="btn btn-primary cta-btn-wa">
+                        <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20ingin%20konsultasi%20mengenai%20proyek%20website%20untuk%20bisnis%20saya."
+                            target="_blank" rel="noopener" class="btn btn-primary cta-btn-wa">
                             <i class="fab fa-whatsapp"></i>
                             Konsultasi Gratis via WhatsApp
                         </a>
@@ -1266,7 +1327,8 @@
                         <span class="logo-bracket">&lt;</span>R<span class="logo-dot">.</span>A<span
                             class="logo-bracket">/&gt;</span>
                     </a>
-                    <p>Full Stack Web Developer &amp; Software Engineer dari Yogyakarta. Membangun solusi digital modern, performa tinggi, dan inklusif.</p>
+                    <p>Full Stack Web Developer &amp; Software Engineer dari Yogyakarta. Membangun solusi digital
+                        modern, performa tinggi, dan inklusif.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navigasi</h4>
@@ -1315,7 +1377,7 @@
             </div>
             <h3 class="cv-modal-title" id="cvModalTitle">Curriculum Vitae (CV)</h3>
             <p class="cv-modal-subtitle">Muhammad Rizki Ardhana — Full Stack Web Developer &amp; Software Engineer</p>
-            
+
             <div class="cv-modal-highlights">
                 <div class="cv-highlight-item">
                     <i class="fas fa-graduation-cap"></i>
@@ -1332,11 +1394,13 @@
             </div>
 
             <div class="cv-modal-actions">
-                <a href="https://linkedin.com/in/Muhammad-rizki-ardhana/" target="_blank" rel="noopener" class="btn btn-primary btn-full">
+                <a href="https://linkedin.com/in/Muhammad-rizki-ardhana/" target="_blank" rel="noopener"
+                    class="btn btn-primary btn-full">
                     <i class="fab fa-linkedin"></i>
                     Lihat Profil Lengkap LinkedIn
                 </a>
-                <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20ingin%20meminta%20dokumen%20CV%20formal%20PDF%20Anda%20untuk%20peluang%20kerja%2Fproyek." target="_blank" rel="noopener" class="btn btn-cv-wa btn-full">
+                <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20ingin%20meminta%20dokumen%20CV%20formal%20PDF%20Anda%20untuk%20peluang%20kerja%2Fproyek."
+                    target="_blank" rel="noopener" class="btn btn-cv-wa btn-full">
                     <i class="fab fa-whatsapp"></i>
                     Minta File CV (PDF) via WhatsApp
                 </a>

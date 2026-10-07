@@ -5,6 +5,48 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ============ Dark / Light Theme Toggle ============
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const savedTheme = localStorage.getItem('portfolio-theme');
+
+    // Apply saved theme on initial load
+    if (savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        if (themeIcon) {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        if (themeIcon) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const targetTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            document.documentElement.setAttribute('data-theme', targetTheme);
+            localStorage.setItem('portfolio-theme', targetTheme);
+
+            if (themeIcon) {
+                if (targetTheme === 'light') {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    themeToggle.setAttribute('title', 'Ganti ke Mode Gelap');
+                } else {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    themeToggle.setAttribute('title', 'Ganti ke Mode Terang');
+                }
+            }
+        });
+    }
+
     // ============ Cursor Glow Effect ============
     const cursorGlow = document.getElementById('cursorGlow');
     if (cursorGlow) {
