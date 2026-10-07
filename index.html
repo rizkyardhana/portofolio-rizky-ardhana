@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Rizki Ardhana — Full Stack Web Developer &amp; Software Engineer | Yogyakarta</title>
+    <meta name="description"
+        content="Muhammad Rizki Ardhana — Full Stack Web Developer, Software Engineer &amp; Programmer di Yogyakarta. Berpengalaman dalam Frontend &amp; Backend, perancangan web modern, integrasi database, dan solusi digital inklusif.">
+    <meta property="og:title" content="Muhammad Rizki Ardhana — Full Stack Web Developer &amp; Software Engineer">
+    <meta property="og:description"
+        content="Full Stack Web Developer, Software Engineer &amp; Programmer. Spesialis Frontend &amp; Backend, arsitektur web modern, dan solusi digital inklusif.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Floating nav -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>R<span class="logo-dot">.</span>A<span
+                    class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">Beranda</a></li>
+                <li><a href="#about" class="nav-link">Tentang</a></li>
+                <li><a href="#services" class="nav-link">Layanan</a></li>
+                <li><a href="#projects" class="nav-link">Proyek</a></li>
+                <li><a href="#process" class="nav-link">Cara Kerja</a></li>
+                <li><a href="#skills" class="nav-link">Keahlian</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-animate="fade-up">
+                    <span class="status-dot"></span>
+                    Tersedia untuk proyek baru
+                </div>
+                <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+                    Halo, saya<br>
+                    <span class="hero-name">Rizki Ardhana</span>
+                </h1>
+                <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </p>
+                <p class="hero-desc" data-animate="fade-up" data-delay="300">
+                    Membangun pengalaman web yang <em>responsif</em>, <em>aksesibel</em>, dan <em>memukau</em> — dari
+                    Yogyakarta untuk dunia.
+                </p>
+                <div class="hero-cta" data-animate="fade-up" data-delay="400">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Lihat Proyek
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        Hubungi Saya
+                    </a>
+                    <button class="btn btn-cv-btn" id="openCvModal">
+                        <i class="fas fa-file-download"></i>
+                        Unduh CV
+                    </button>
+                </div>
+                <div class="hero-stats" data-animate="fade-up" data-delay="500">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Tahun Pengalaman</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Proyek Selesai</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="6">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Sertifikasi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual" data-animate="fade-left" data-delay="300">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-glow"></div>
+                    <img src="images/profile-rizki - Copy.png" alt="Muhammad Rizki Ardhana" class="hero-image">
+                    <div class="hero-image-ring"></div>
+                </div>
+                <div class="floating-card card-1">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="floating-card card-4">
+                    <i class="fab fa-react"></i>
+                    <span>React.js</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll ke bawah</span>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">&lt;tentang/&gt;</span>
+                <h2 class="section-title">Tentang Saya</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image" data-animate="fade-right">
+                    <div class="about-img-wrapper">
+                        <img src="images/profile-rizki - Copy.png" alt="Rizki Ardhana">
+                        <div class="about-img-border"></div>
+                    </div>
+                </div>
+                <div class="about-text" data-animate="fade-left">
+                    <h3 class="about-heading">Full Stack Web Developer &amp; <span class="gradient-text">Software Engineer</span>
+                    </h3>
+                    <p class="about-description">
+                        Mahasiswa Teknik Informatika yang berdedikasi sebagai <strong>Full Stack Web Developer</strong>, <strong>Software Engineer</strong>, dan <strong>Programmer</strong>. Menguasai alur rekayasa web secara komprehensif mulai dari <strong>Frontend &amp; Backend</strong>, integrasi database, arsitektur RESTful API, hingga penerapan clean code dan performa tinggi.
+                    </p>
+                    <p class="about-description">
+                        Berpengalaman memimpin tim teknis sebagai Co-Founder &amp; CTO di Bariz, serta memiliki kepedulian tinggi terhadap aksesibilitas web dan inklusivitas digital. Siap menghadirkan solusi software &amp; web development berkualitas tinggi untuk skala startup maupun korporasi.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Yogyakarta, Indonesia</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-university"></i>
+                            <span>Universitas Atma Jaya Yogyakarta</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Teknik Informatika — IPK 3.5</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Co-Founder & CTO di Bariz</span>
+                        </div>
+                    </div>
+                    <div class="about-cta">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-handshake"></i>
+                            Mari Berkolaborasi
+                        </a>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/Muhammad-rizki-ardhana/" target="_blank" rel="noopener"
+                                aria-label="LinkedIn" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:marsharizky01@gmail.com" aria-label="Email" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20Anda."
+                                target="_blank" rel="noopener" aria-label="WhatsApp" class="social-link">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bento Grid Showcase -->
+            <div class="bento-grid" data-animate="fade-up">
+                <!-- Bento 1: Interactive Code Terminal (macOS style) -->
+                <div class="bento-card bento-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">
+                            <i class="fas fa-code"></i> rizki-ardhana.json
+                        </div>
+                        <button class="terminal-copy-btn" id="copyCodeBtn" aria-label="Salin Kode Bio">
+                            <i class="far fa-copy"></i> <span id="copyCodeText">Salin JSON</span>
+                        </button>
+                    </div>
+                    <div class="terminal-body">
+                        <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-key">"name"</span>: <span class="code-str">"Muhammad Rizki Ardhana"</span>,
+  <span class="code-key">"role"</span>: <span class="code-str">"Full Stack Web Developer &amp; Software Engineer"</span>,
+  <span class="code-key">"leadership"</span>: <span class="code-str">"Co-Founder &amp; CTO @ Bariz"</span>,
+  <span class="code-key">"education"</span>: <span class="code-str">"Teknik Informatika UAJY (IPK 3.5)"</span>,
+  <span class="code-key">"coreStack"</span>: [<span class="code-str">"JavaScript"</span>, <span class="code-str">"React"</span>, <span class="code-str">"Node.js"</span>, <span class="code-str">"PHP"</span>, <span class="code-str">"MySQL"</span>],
+  <span class="code-key">"passion"</span>: <span class="code-str">"Clean Code, Aksesibilitas Web &amp; Scalability"</span>,
+  <span class="code-key">"availableForHire"</span>: <span class="code-bool">true</span>
+};</code></pre>
+                    </div>
+                </div>
+
+                <!-- Bento 2: Location & Live Local Time -->
+                <div class="bento-card bento-location">
+                    <div class="bento-card-top">
+                        <div class="bento-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <span class="bento-badge">Base Location</span>
+                    </div>
+                    <h4 class="bento-title">Yogyakarta, Indonesia 🇮🇩</h4>
+                    <div class="bento-time-box">
+                        <i class="far fa-clock"></i>
+                        <span id="liveClock">Loading waktu...</span>
+                        <span class="time-zone">WIB (UTC+7)</span>
+                    </div>
+                    <p class="bento-subtext">Terbuka untuk kolaborasi remote seluruh Indonesia maupun internasional.</p>
+                </div>
+
+                <!-- Bento 3: Inklusif & Bahasa Isyarat -->
+                <div class="bento-card bento-inclusive">
+                    <div class="bento-card-top">
+                        <div class="bento-icon"><i class="fas fa-hands"></i></div>
+                        <span class="bento-badge highlight">Social Impact</span>
+                    </div>
+                    <h4 class="bento-title">Inklusivitas &amp; Aksesibilitas</h4>
+                    <p class="bento-subtext">Pengajar Bahasa Isyarat Indonesia (BISINDO) &amp; arsitek platform arsip digital Garda BISINDO untuk komunitas Tuli.</p>
+                    <div class="inclusive-tag">
+                        <i class="fas fa-universal-access"></i> Standar Web Aksesibel (WCAG)
+                    </div>
+                </div>
+
+                <!-- Bento 4: Live Availability Status Radar -->
+                <div class="bento-card bento-status">
+                    <div class="bento-card-top">
+                        <div class="status-radar-wrapper">
+                            <span class="radar-ping"></span>
+                            <span class="radar-dot"></span>
+                        </div>
+                        <span class="bento-badge online">Available</span>
+                    </div>
+                    <h4 class="bento-title">Status Kerja Saat Ini</h4>
+                    <p class="status-headline">Terbuka untuk Freelance &amp; Posisi IT</p>
+                    <p class="bento-subtext">Siap mewujudkan website bisnis berkualitas tinggi tepat waktu.</p>
+                    <a href="#contact" class="bento-link">
+                        <span>Diskusikan Proyek</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">&lt;pengalaman/&gt;</span>
+                <h2 class="section-title">Pengalaman Kerja</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-animate="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Co-Founder & CTO</h3>
+                                <p class="timeline-company"><i class="fas fa-building"></i> Bariz — Yogyakarta</p>
+                            </div>
+                            <span class="timeline-date">Feb 2021 – Sekarang</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Memimpin pengembangan dan perancangan arsitektur situs web perusahaan dari awal hingga
+                                peluncuran</li>
+                            <li>Mengembangkan antarmuka frontend menggunakan HTML5 dan CSS3 dengan pendekatan responsif
+                            </li>
+                            <li>Merancang seluruh materi promosi digital termasuk poster, konten media sosial, dan
+                                elemen branding</li>
+                            <li>Mengkoordinasikan tim kecil dalam pengembangan produk digital dan strategi pemasaran
+                            </li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Branding</span>
+                            <span class="tag">Leadership</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Web Developer (Intern)</h3>
+                                <p class="timeline-company"><i class="fas fa-building"></i> Ohana Indonesia — Yogyakarta
+                                </p>
+                            </div>
+                            <span class="timeline-date">Jul 2022 – Apr 2023</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Mengembangkan tampilan website menggunakan HTML dan CSS</li>
+                            <li>Menerjemahkan desain UI menjadi antarmuka web fungsional yang selaras dengan kebutuhan
+                                klien</li>
+                            <li>Mendesain konten visual untuk kebutuhan promosi digital dan media sosial</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">UI Slicing</span>
+                            <span class="tag">Visual Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-animate="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Guru Bahasa Isyarat Indonesia</h3>
+                                <p class="timeline-company"><i class="fas fa-building"></i> Silang dan Sunyi Studio —
+                                    Jakarta</p>
+                            </div>
+                            <span class="timeline-date">Feb 2025 – Des 2025</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Mengajarkan Bahasa Isyarat Indonesia kepada beragam peserta didik dari berbagai latar
+                                belakang</li>
+                            <li>Mengembangkan materi pembelajaran terstruktur untuk pendidikan inklusif</li>
+                            <li>Mendukung inisiatif aksesibilitas komunikasi di lingkungan publik dan pendidikan</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">BISINDO</span>
+                            <span class="tag">Aksesibilitas</span>
+                            <span class="tag">Edukasi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">&lt;layanan/&gt;</span>
+                <h2 class="section-title">Solusi & Layanan Web</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Layanan pembuatan website profesional berorientasi hasil untuk meningkatkan kredibilitas & penjualan bisnis Anda</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card" data-animate="fade-up" data-delay="100">
+                    <div class="service-badge">Paling Populer</div>
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="service-title">Company Profile Website</h3>
+                    <p class="service-desc">Website profil perusahaan berkelas dan modern untuk memperkuat identitas brand, membangun kepercayaan klien B2B, dan meningkatkan daya saing pasar.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Desain Eksklusif & Custom Branding</li>
+                        <li><i class="fas fa-check-circle"></i> Responsif Sempurna di Smartphone & Laptop</li>
+                        <li><i class="fas fa-check-circle"></i> Terstruktur SEO & Cepat Diakses (Fast Loading)</li>
+                        <li><i class="fas fa-check-circle"></i> Integrasi Layanan, Tim, Portofolio & Kontak</li>
+                    </ul>
+                    <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20konsultasi%20pembuatan%20Website%20Company%20Profile." target="_blank" rel="noopener" class="service-btn">
+                        <span>Konsultasi Proyek Ini</span>
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card" data-animate="fade-up" data-delay="200">
+                    <div class="service-badge highlight">Tinggi Konversi</div>
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="service-title">High-Converting Landing Page</h3>
+                    <p class="service-desc">Halaman penjualan satu halaman yang difokuskan khusus untuk konversi iklan (Meta/Google Ads), kampanye produk, dan penangkapan prospek calon pembeli.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Kecepatan Super Ringan (&lt; 2 Detik)</li>
+                        <li><i class="fas fa-check-circle"></i> Struktur Copywriting Persuasif & Call-to-Action</li>
+                        <li><i class="fas fa-check-circle"></i> Direct WhatsApp Order & Lead Form</li>
+                        <li><i class="fas fa-check-circle"></i> Siap Pasang Meta Pixel & Google Analytics</li>
+                    </ul>
+                    <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20konsultasi%20pembuatan%20Landing%20Page." target="_blank" rel="noopener" class="service-btn">
+                        <span>Konsultasi Proyek Ini</span>
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card" data-animate="fade-up" data-delay="300">
+                    <div class="service-badge">Custom System</div>
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="service-title">Aplikasi Web & Sistem Kustom</h3>
+                    <p class="service-desc">Pengembangan website interaktif dengan sistem manajemen dinamis, integrasi database, atau dashboard admin sesuai kebutuhan alur bisnis Anda.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Arsitektur Clean Code & Skalabilitas Tinggi</li>
+                        <li><i class="fas fa-check-circle"></i> Dashboard Admin & Manajemen Data</li>
+                        <li><i class="fas fa-check-circle"></i> Integrasi API Eksternal & Basis Data Modern</li>
+                        <li><i class="fas fa-check-circle"></i> Keamanan Teruji & Proteksi Data</li>
+                    </ul>
+                    <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20konsultasi%20pembuatan%20Aplikasi%20Web%20Kustom." target="_blank" rel="noopener" class="service-btn">
+                        <span>Konsultasi Proyek Ini</span>
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card" data-animate="fade-up" data-delay="400">
+                    <div class="service-badge">Revamp & Speed</div>
+                    <div class="service-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="service-title">Redesign & Speed Optimization</h3>
+                    <p class="service-desc">Modernisasi tampilan website yang sudah ketinggalan zaman menjadi kekinian dan elegan, sekaligus perbaikan skor performa loading yang lambat.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Desain Visual UI/UX Baru yang Lebih Menawan</li>
+                        <li><i class="fas fa-check-circle"></i> Optimasi Core Web Vitals & Google PageSpeed</li>
+                        <li><i class="fas fa-check-circle"></i> Perbaikan Tampilan Responsif Smartphone</li>
+                        <li><i class="fas fa-check-circle"></i> Pembersihan Skrip & Efisiensi Aset Media</li>
+                    </ul>
+                    <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20konsultasi%20Redesign%20dan%20Optimasi%20Website." target="_blank" rel="noopener" class="service-btn">
+                        <span>Konsultasi Proyek Ini</span>
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">&lt;proyek/&gt;</span>
+                <h2 class="section-title">Proyek Unggulan</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Beberapa proyek terbaik yang telah saya kerjakan</p>
+            </div>
+
+            <!-- Project Filters -->
+            <div class="project-filters" data-animate="fade-up">
+                <button class="filter-btn active" data-filter="all">
+                    <span>Semua Proyek</span>
+                    <span class="filter-count">5</span>
+                </button>
+                <button class="filter-btn" data-filter="webapp">
+                    <span>Web App &amp; Platform</span>
+                </button>
+                <button class="filter-btn" data-filter="company">
+                    <span>Company &amp; Profil</span>
+                </button>
+                <button class="filter-btn" data-filter="inclusive">
+                    <span>Inklusif &amp; Komunitas</span>
+                </button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card featured" data-category="webapp inclusive" data-animate="fade-up">
+                    <div class="project-card-inner">
+                        <div class="project-image">
+                            <img src="images/logo garda bisindo.jpg" alt="Garda BISINDO" class="project-logo">
+                            <div class="project-overlay">
+                                <span class="project-badge">🏆 Platform Resmi GERKATIN</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-role"><i class="fas fa-code"></i> Full Stack Developer</span>
+                                <span class="project-year">2026 – Sekarang</span>
+                            </div>
+                            <h3 class="project-title">Garda BISINDO</h3>
+                            <p class="project-subtitle">Platform Arsip & Dokumentasi Digital BISINDO</p>
+                            <p class="project-desc">Platform web end-to-end untuk pelestarian Bahasa Isyarat Indonesia
+                                yang telah mengarsipkan 2.500+ kosakata dan 1.200 video dokumentasi dari 38 provinsi.
+                            </p>
+                            <div class="project-highlights">
+                                <div class="highlight"><i class="fas fa-database"></i> 2.500+ Kosakata</div>
+                                <div class="highlight"><i class="fas fa-video"></i> 1.200 Video</div>
+                                <div class="highlight"><i class="fas fa-map"></i> 38 Provinsi</div>
+                                <div class="highlight"><i class="fas fa-users"></i> 500+ Relawan</div>
+                            </div>
+                            <div class="project-tech">
+                                <span>Full Stack</span>
+                                <span>Real-time Data</span>
+                                <span>Interactive Map</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://gardabisindo.vercel.app/" target="_blank" rel="noopener"
+                                    class="project-link-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="webapp inclusive" data-animate="fade-up" data-delay="100">
+                    <div class="project-card-inner">
+                        <div class="project-image">
+                            <img src="images/logo bariz.png" alt="Bariz" class="project-logo">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-role"><i class="fas fa-code"></i> Front-end + Back-end</span>
+                                <span class="project-year">2024 – Sekarang</span>
+                            </div>
+                            <h3 class="project-title">Bariz</h3>
+                            <p class="project-subtitle">Platform E-Commerce Ekonomi Kreatif</p>
+                            <p class="project-desc">Platform e-commerce untuk memasarkan produk seni dari 19+ seniman
+                                Tuli dalam bentuk tas, pouch, dan aksesori.</p>
+                            <div class="project-tech">
+                                <span>React.js</span>
+                                <span>E-Commerce</span>
+                                <span>Responsive UI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://barizid.vercel.app/" target="_blank" rel="noopener"
+                                    class="project-link-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="company" data-animate="fade-up" data-delay="200">
+                    <div class="project-card-inner">
+                        <div class="project-image">
+                            <img src="images/logo kara homestay.png" alt="Kara Homestay" class="project-logo">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-role"><i class="fas fa-code"></i> Front-end Developer</span>
+                                <span class="project-year">2022 – Sekarang</span>
+                            </div>
+                            <h3 class="project-title">Kara Homestay</h3>
+                            <p class="project-subtitle">Website Profil & Pemesanan Homestay</p>
+                            <p class="project-desc">Website profil dan informasi untuk homestay berbasis kearifan lokal
+                                dengan antarmuka responsif.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://karahomestay.vercel.app/" target="_blank" rel="noopener"
+                                    class="project-link-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="inclusive company" data-animate="fade-up" data-delay="300">
+                    <div class="project-card-inner">
+                        <div class="project-image">
+                            <img src="images/logo deaf_to_dev.png" alt="Deaf to Dev" class="project-logo">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-role"><i class="fas fa-code"></i> Front-end Developer</span>
+                                <span class="project-year">Des 2021</span>
+                            </div>
+                            <h3 class="project-title">Web Deaf to Dev</h3>
+                            <p class="project-subtitle">Platform Academy Khusus Tuli</p>
+                            <p class="project-desc">Situs web fungsional sebagai bagian dari program pelatihan
+                                pengembangan web. Meraih Juara 1 dalam evaluasi proyek akhir. 🏆</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="webapp company" data-animate="fade-up" data-delay="400">
+                    <div class="project-card-inner">
+                        <div class="project-image">
+                            <img src="images/logo sporton.svg" alt="SportOn" class="project-logo">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-role"><i class="fas fa-code"></i> Web Developer</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title">SportOn</h3>
+                            <p class="project-subtitle">Website Platform Olahraga</p>
+                            <p class="project-desc">Website platform olahraga yang dirancang untuk menyediakan informasi
+                                dan layanan terkait aktivitas olahraga secara modern dan responsif.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://fyep-web-prog-rizky-ardhana-session-rho.vercel.app/" target="_blank"
+                                    rel="noopener" class="project-link-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">&lt;proses/&gt;</span>
+                <h2 class="section-title">Alur Kerja Transparan</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">4 tahapan terstruktur & profesional untuk mewujudkan website bisnis Anda dari ide hingga online</p>
+            </div>
+            <div class="process-grid">
+                <!-- Step 1 -->
+                <div class="process-card" data-animate="fade-up" data-delay="100">
+                    <div class="process-step-badge">01</div>
+                    <div class="process-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="process-title">Konsultasi & Discovery</h3>
+                    <p class="process-desc">Diskusi mendalam mengenai tujuan bisnis, profil target audiens, fitur yang dibutuhkan, serta estimasi timeline dan anggaran yang transparan tanpa biaya tersembunyi.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-card" data-animate="fade-up" data-delay="200">
+                    <div class="process-step-badge">02</div>
+                    <div class="process-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="process-title">Desain UI/UX & Konsep</h3>
+                    <p class="process-desc">Perancangan tata letak visual, palet warna, dan prototipe antarmuka yang modern dan elegan. Memastikan alur navigasi intuitif sebelum implementasi kode dimulai.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-card" data-animate="fade-up" data-delay="300">
+                    <div class="process-step-badge">03</div>
+                    <div class="process-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="process-title">Coding & Pengembangan</h3>
+                    <p class="process-desc">Implementasi kode bersih (clean code) berstandar modern, animasi mikro yang interaktif, integrasi sistem, dan optimasi responsif di seluruh tipe gadget.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-card" data-animate="fade-up" data-delay="400">
+                    <div class="process-step-badge">04</div>
+                    <div class="process-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="process-title">Testing, Launch & Garansi</h3>
+                    <p class="process-desc">Pengujian performa & bebas bug, setup domain dan hosting, peluncuran website resmi ke publik, disertai garansi maintenance dan panduan operasional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Section (Value Proposition) -->
+    <section class="why-me" id="why-me">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">&lt;keunggulan/&gt;</span>
+                <h2 class="section-title">Mengapa Memilih Saya?</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Nilai tambah dan standar profesional tinggi yang saya hadirkan di setiap baris kode</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card" data-animate="fade-up" data-delay="100">
+                    <div class="why-icon"><i class="fas fa-code"></i></div>
+                    <div class="why-card-content">
+                        <h3>Clean Code &amp; Skalabilitas</h3>
+                        <p>Kode dirancang modular, berstruktur rapi, dan mudah dikembangkan di masa depan tanpa membuat website lambat atau sulit dimaintain.</p>
+                    </div>
+                </div>
+                <div class="why-card" data-animate="fade-up" data-delay="200">
+                    <div class="why-icon"><i class="fas fa-universal-access"></i></div>
+                    <div class="why-card-content">
+                        <h3>Inklusif &amp; Standar WCAG</h3>
+                        <p>Spesialis dalam web accessibility — memastikan website Anda nyaman dinavigasi oleh seluruh pengunjung termasuk penyandang disabilitas.</p>
+                    </div>
+                </div>
+                <div class="why-card" data-animate="fade-up" data-delay="300">
+                    <div class="why-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="why-card-content">
+                        <h3>CTO &amp; Mindset Bisnis</h3>
+                        <p>Berpengalaman memimpin teknologi di Bariz. Saya tidak hanya sekadar coding, namun memikirkan konversi, branding, dan tujuan bisnis Anda.</p>
+                    </div>
+                </div>
+                <div class="why-card" data-animate="fade-up" data-delay="400">
+                    <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="why-card-content">
+                        <h3>Transparansi &amp; Garansi Purna Jual</h3>
+                        <p>Komunikasi berkala, estimasi waktu yang ditepati, tanpa biaya tersembunyi, serta garansi perbaikan bug setelah website online.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">&lt;keahlian/&gt;</span>
+                <h2 class="section-title">Keahlian Teknis &amp; IT Competencies</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Kompetensi menyeluruh dalam Full Stack Web Development, Software Engineering, Frontend &amp; Backend, dan rekayasa perangkat lunak modern</p>
+            </div>
+
+            <!-- Core IT Roles Badges -->
+            <div class="competency-overview" data-animate="fade-up">
+                <span class="competency-badge"><i class="fas fa-layer-group"></i> Full Stack Web Developer</span>
+                <span class="competency-badge"><i class="fas fa-laptop-code"></i> Software Engineer</span>
+                <span class="competency-badge"><i class="fas fa-code-branch"></i> Frontend &amp; Backend</span>
+                <span class="competency-badge"><i class="fas fa-terminal"></i> Programmer</span>
+                <span class="competency-badge"><i class="fas fa-globe"></i> Web Development</span>
+            </div>
+
+            <!-- Interactive Tech Stack Grid with Brand Colors & Glow -->
+            <div class="tech-stack-showcase" data-animate="fade-up">
+                <div class="tech-icon-card" style="--brand-color: #E34F26;" data-tech="HTML5">
+                    <i class="fab fa-html5"></i>
+                    <span class="tech-name">HTML5</span>
+                    <span class="tech-level">Expert</span>
+                </div>
+                <div class="tech-icon-card" style="--brand-color: #1572B6;" data-tech="CSS3">
+                    <i class="fab fa-css3-alt"></i>
+                    <span class="tech-name">CSS3</span>
+                    <span class="tech-level">Expert</span>
+                </div>
+                <div class="tech-icon-card" style="--brand-color: #F7DF1E;" data-tech="JavaScript">
+                    <i class="fab fa-js-square"></i>
+                    <span class="tech-name">JavaScript</span>
+                    <span class="tech-level">Advanced</span>
+                </div>
+                <div class="tech-icon-card" style="--brand-color: #61DAFB;" data-tech="React">
+                    <i class="fab fa-react"></i>
+                    <span class="tech-name">React.js</span>
+                    <span class="tech-level">Intermediate</span>
+                </div>
+                <div class="tech-icon-card" style="--brand-color: #339933;" data-tech="Node.js">
+                    <i class="fab fa-node-js"></i>
+                    <span class="tech-name">Node.js</span>
+                    <span class="tech-level">Intermediate</span>
+                </div>
+                <div class="tech-icon-card" style="--brand-color: #777BB4;" data-tech="PHP">
+                    <i class="fab fa-php"></i>
+                    <span class="tech-name">PHP</span>
+                    <span class="tech-level">Intermediate</span>
+                </div>
+                <div class="tech-icon-card" style="--brand-color: #4479A1;" data-tech="MySQL">
+                    <i class="fas fa-database"></i>
+                    <span class="tech-name">MySQL</span>
+                    <span class="tech-level">Advanced</span>
+                </div>
+                <div class="tech-icon-card" style="--brand-color: #F05032;" data-tech="Git">
+                    <i class="fab fa-git-alt"></i>
+                    <span class="tech-name">Git</span>
+                    <span class="tech-level">Advanced</span>
+                </div>
+                <div class="tech-icon-card" style="--brand-color: #F24E1E;" data-tech="Figma">
+                    <i class="fab fa-figma"></i>
+                    <span class="tech-name">Figma</span>
+                    <span class="tech-level">UI/UX</span>
+                </div>
+                <div class="tech-icon-card" style="--brand-color: #007ACC;" data-tech="VS Code">
+                    <i class="fas fa-code"></i>
+                    <span class="tech-name">VS Code</span>
+                    <span class="tech-level">IDE</span>
+                </div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category" data-animate="fade-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Frontend Web Development</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">HTML5 &amp; Semantic Web</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">CSS3 &amp; Responsive Layout</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">JavaScript (ES6+)</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">React.js &amp; Component-Based UI</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">Mobile-First &amp; Cross-Browser Optimization</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-animate="fade-up" data-delay="100">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend &amp; Database</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">Node.js Runtime</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">Express.js Framework</span>
+                                <span class="skill-percent">65%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">PHP Server Scripting</span>
+                                <span class="skill-percent">65%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">MySQL &amp; Relational Database</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-name">RESTful API Design &amp; Integration</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-animate="fade-up" data-delay="200">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Software Engineering &amp; Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git &amp; GitHub</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> VS Code</span>
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> REST API Architecture</span>
+                        <span class="skill-tag"><i class="fas fa-check-double"></i> Clean Code &amp; Refactoring</span>
+                        <span class="skill-tag"><i class="fas fa-cube"></i> Object-Oriented (OOP)</span>
+                        <span class="skill-tag"><i class="fas fa-bug"></i> Debugging &amp; Troubleshooting</span>
+                        <span class="skill-tag"><i class="fas fa-tachometer-alt"></i> Web Performance</span>
+                        <span class="skill-tag"><i class="fas fa-tasks"></i> Agile / Scrum Workflow</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-animate="fade-up" data-delay="300">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>UI/UX &amp; Inklusivitas Digital</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-figma"></i> Figma (UI/UX)</span>
+                        <span class="skill-tag"><i class="fas fa-universal-access"></i> Web Accessibility (WCAG)</span>
+                        <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Mobile-First Approach</span>
+                        <span class="skill-tag"><i class="fas fa-drafting-compass"></i> Wireframing &amp; Prototype</span>
+                        <span class="skill-tag"><i class="fas fa-swatchbook"></i> Design Systems</span>
+                        <span class="skill-tag"><i class="fas fa-users-cog"></i> Technical Leadership (CTO)</span>
+                        <span class="skill-tag"><i class="fas fa-comments"></i> Komunikasi &amp; Kolaborasi</span>
+                        <span class="skill-tag"><i class="fas fa-hands"></i> Aksesibilitas Bahasa Isyarat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certifications">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">&lt;sertifikasi/&gt;</span>
+                <h2 class="section-title">Sertifikasi & Pendidikan</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="edu-highlight" data-animate="fade-up">
+                <div class="edu-highlight-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="edu-highlight-info">
+                    <h3>Universitas Atma Jaya Yogyakarta</h3>
+                    <p>Sarjana Teknik Informatika · Agustus 2023 – Sekarang</p>
+                    <span class="edu-gpa">IPK: 3.5 / 4.00</span>
+                </div>
+            </div>
+
+            <div class="cert-grid">
+                <div class="cert-card" data-animate="fade-up">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <h4>Futuremakers Youth Employability</h4>
+                        <p class="cert-issuer">Web Programming Training</p>
+                        <p class="cert-date">Februari 2026 · 136 Jam</p>
+                        <div class="cert-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React.js</span><span>PHP</span><span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card" data-animate="fade-up" data-delay="50">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <h4>Front-End untuk Pemula</h4>
+                        <p class="cert-issuer">Dicoding Indonesia</p>
+                        <p class="cert-date">Februari 2026</p>
+                        <div class="cert-tags">
+                            <span>DOM</span><span>Event Handling</span><span>Web Storage</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card" data-animate="fade-up" data-delay="100">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <h4>Back-End Pemula dengan JavaScript</h4>
+                        <p class="cert-issuer">Dicoding Indonesia & AWS</p>
+                        <p class="cert-date">Oktober 2025</p>
+                        <div class="cert-tags">
+                            <span>Node.js</span><span>Hapi</span><span>RESTful API</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card" data-animate="fade-up" data-delay="150">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <h4>Dasar Pemrograman JavaScript</h4>
+                        <p class="cert-issuer">Dicoding Indonesia</p>
+                        <p class="cert-date">Oktober 2025</p>
+                        <div class="cert-tags">
+                            <span>OOP</span><span>Functional</span><span>Async</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card" data-animate="fade-up" data-delay="200">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <h4>Dasar Pemrograman Web</h4>
+                        <p class="cert-issuer">Dicoding Indonesia</p>
+                        <p class="cert-date">Mei 2024</p>
+                        <div class="cert-tags">
+                            <span>HTML5</span><span>CSS3</span><span>Flexbox</span><span>Semantic HTML</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card" data-animate="fade-up" data-delay="250">
+                    <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="cert-info">
+                        <h4>Web Development Course 🏆</h4>
+                        <p class="cert-issuer">Deaf to Dev</p>
+                        <p class="cert-date">Desember 2021 · Juara 1</p>
+                        <div class="cert-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">&lt;faq/&gt;</span>
+                <h2 class="section-title">Pertanyaan Umum (FAQ)</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Jawaban seputar hal-hal yang sering ditanyakan klien sebelum memulai proyek website</p>
+            </div>
+            <div class="faq-list">
+                <!-- FAQ 1 -->
+                <div class="faq-item" data-animate="fade-up" data-delay="100">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text"><i class="fas fa-question-circle"></i> Berapa lama waktu yang dibutuhkan untuk membuat website?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Waktu pengerjaan bergantung pada tipe dan kompleksitas proyek:</p>
+                            <ul>
+                                <li><strong>Landing Page:</strong> Rata-rata 3 – 5 hari kerja.</li>
+                                <li><strong>Company Profile:</strong> Rata-rata 1 – 2 minggu kerja.</li>
+                                <li><strong>Aplikasi Web Kustom:</strong> Disesuaikan dengan cakupan fitur yang disepakati (biasanya 2 – 4 minggu).</li>
+                            </ul>
+                            <p>Saya selalu mengutamakan ketepatan waktu dengan laporan perkembangan berkala.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item" data-animate="fade-up" data-delay="150">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text"><i class="fas fa-mobile-alt"></i> Apakah website dijamin responsif di smartphone dan tablet?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Ya, tentu saja! Semua website dibangun dengan prinsip <em>mobile-first responsive design</em>. Tampilan dan fungsionalitasnya dipastikan sempurna saat diakses dari smartphone, tablet, laptop, hingga layar monitor besar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item" data-animate="fade-up" data-delay="200">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text"><i class="fas fa-server"></i> Bagaimana jika saya belum memiliki domain dan hosting?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Tidak perlu bingung. Saya siap membantu Anda dari nol mulai dari memilih nama domain yang tepat (.com, .id, dll.), pemilihan provider hosting berkecepatan tinggi, hingga konfigurasi SSL (keamanan HTTPS) sampai website online aktif.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item" data-animate="fade-up" data-delay="250">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text"><i class="fas fa-shield-alt"></i> Apakah ada garansi dan revisi jika ada hal yang kurang cocok?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Pasti ada! Setiap paket proyek mencakup kesempatan revisi desain hingga sesuai ekspektasi Anda, serta garansi pemeliharaan (maintenance) setelah website meluncur untuk menangani jika ada kendala teknis.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item" data-animate="fade-up" data-delay="300">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-q-text"><i class="fas fa-wallet"></i> Bagaimana sistem pembayaran dan tahapan kerjasamanya?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Sistem pembayaran dilakukan secara transparan dan aman dengan skema Down Payment (DP) 50% saat proyek dimulai dan pelunasan 50% setelah website selesai diuji coba dan disetujui untuk peluncuran resmi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner Section -->
+    <section class="cta-banner-section" id="cta-banner">
+        <div class="section-container">
+            <div class="cta-banner-card" data-animate="fade-up">
+                <div class="cta-banner-glow"></div>
+                <div class="cta-banner-content">
+                    <div class="cta-banner-badge">
+                        <i class="fas fa-bolt"></i> Siap Melangkah ke Level Berikutnya
+                    </div>
+                    <h2 class="cta-banner-title">Punya Ide Proyek atau Ingin Meningkatkan Penjualan Bisnis Anda?</h2>
+                    <p class="cta-banner-desc">Mari diskusikan kebutuhan website Anda. Dapatkan konsultasi gratis & solusi pengembangan web yang tepat sasaran, berestetika tinggi, dan cepat diakses.</p>
+                    <div class="cta-banner-actions">
+                        <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20ingin%20konsultasi%20mengenai%20proyek%20website%20untuk%20bisnis%20saya." target="_blank" rel="noopener" class="btn btn-primary cta-btn-wa">
+                            <i class="fab fa-whatsapp"></i>
+                            Konsultasi Gratis via WhatsApp
+                        </a>
+                        <a href="#contact" class="btn btn-secondary cta-btn-form">
+                            <i class="fas fa-envelope"></i>
+                            Kirim Brief via Form
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">&lt;kontak/&gt;</span>
+                <h2 class="section-title">Hubungi Saya</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Punya proyek menarik? Atau ingin bekerja sama? Jangan ragu untuk menghubungi
+                    saya!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-animate="fade-right">
+                    <h3 class="contact-heading">Mari Terhubung</h3>
+                    <p class="contact-desc">Saya terbuka untuk proyek freelance, kolaborasi, atau sekadar diskusi
+                        tentang web development. Hubungi saya melalui formulir atau kontak di bawah ini.</p>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">Email</span>
+                                <a href="mailto:marsharizky01@gmail.com"
+                                    class="contact-card-value">marsharizky01@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">WhatsApp</span>
+                                <a href="https://wa.me/628895673306" target="_blank" rel="noopener"
+                                    class="contact-card-value">+62 889-5673-306</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">LinkedIn</span>
+                                <a href="https://linkedin.com/in/Muhammad-rizki-ardhana/" target="_blank" rel="noopener"
+                                    class="contact-card-value">Muhammad Rizki Ardhana</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">Lokasi</span>
+                                <span class="contact-card-value">Yogyakarta, Indonesia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper" data-animate="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Nama Lengkap</label>
+                                <input type="text" id="contactName" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input type="email" id="contactEmail" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subjek</label>
+                            <input type="text" id="contactSubject" placeholder="Proyek Website Baru" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Pesan</label>
+                            <textarea id="contactMessage" rows="5" placeholder="Ceritakan tentang proyek Anda..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>R<span class="logo-dot">.</span>A<span
+                            class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p>Full Stack Web Developer &amp; Software Engineer dari Yogyakarta. Membangun solusi digital modern, performa tinggi, dan inklusif.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <a href="#about">Tentang</a>
+                    <a href="#services">Layanan</a>
+                    <a href="#projects">Proyek</a>
+                    <a href="#process">Cara Kerja</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">Kontak</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Sosial Media</h4>
+                    <div class="footer-social-links">
+                        <a href="https://linkedin.com/in/Muhammad-rizki-ardhana/" target="_blank" rel="noopener"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:marsharizky01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20Anda."
+                            target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Muhammad Rizki Ardhana. Dibuat dengan <i class="fas fa-heart"></i> di Yogyakarta.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20Anda."
+        target="_blank" rel="noopener" class="floating-wa" id="floatingWa" aria-label="Chat via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="floating-wa-text">Chat Sekarang</span>
+    </a>
+
+    <!-- CV Download Modal -->
+    <div class="cv-modal-backdrop" id="cvModal" aria-hidden="true">
+        <div class="cv-modal-box" role="dialog" aria-labelledby="cvModalTitle">
+            <button class="cv-modal-close" id="closeCvModal" aria-label="Tutup Dialog">&times;</button>
+            <div class="cv-modal-icon">
+                <i class="fas fa-file-pdf"></i>
+            </div>
+            <h3 class="cv-modal-title" id="cvModalTitle">Curriculum Vitae (CV)</h3>
+            <p class="cv-modal-subtitle">Muhammad Rizki Ardhana — Full Stack Web Developer &amp; Software Engineer</p>
+            
+            <div class="cv-modal-highlights">
+                <div class="cv-highlight-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Teknik Informatika (IPK 3.5) — Universitas Atma Jaya Yogyakarta</span>
+                </div>
+                <div class="cv-highlight-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Co-Founder &amp; CTO di Bariz (E-Commerce Inklusif)</span>
+                </div>
+                <div class="cv-highlight-item">
+                    <i class="fas fa-trophy"></i>
+                    <span>Juara 1 Web Development Course — Deaf to Dev</span>
+                </div>
+            </div>
+
+            <div class="cv-modal-actions">
+                <a href="https://linkedin.com/in/Muhammad-rizki-ardhana/" target="_blank" rel="noopener" class="btn btn-primary btn-full">
+                    <i class="fab fa-linkedin"></i>
+                    Lihat Profil Lengkap LinkedIn
+                </a>
+                <a href="https://wa.me/628895673306?text=Halo%20Rizki%2C%20saya%20ingin%20meminta%20dokumen%20CV%20formal%20PDF%20Anda%20untuk%20peluang%20kerja%2Fproyek." target="_blank" rel="noopener" class="btn btn-cv-wa btn-full">
+                    <i class="fab fa-whatsapp"></i>
+                    Minta File CV (PDF) via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
