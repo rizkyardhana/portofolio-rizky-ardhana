@@ -108,7 +108,7 @@
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-number" data-count="6">0</span><span class="stat-plus">+</span>
                         <span class="stat-label">Proyek Selesai</span>
                     </div>
                     <div class="stat-divider"></div>
@@ -508,10 +508,13 @@
             <div class="project-filters" data-animate="fade-up">
                 <button class="filter-btn active" data-filter="all">
                     <span>Semua Proyek</span>
-                    <span class="filter-count">5</span>
+                    <span class="filter-count">6</span>
                 </button>
                 <button class="filter-btn" data-filter="webapp">
                     <span>Web App &amp; Platform</span>
+                </button>
+                <button class="filter-btn" data-filter="marketing">
+                    <span>Digital Marketing &amp; Media</span>
                 </button>
                 <button class="filter-btn" data-filter="company">
                     <span>Company &amp; Profil</span>
@@ -557,6 +560,88 @@
                                     <i class="fas fa-external-link-alt"></i>
                                     Live Demo
                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card: HASANI Campaign -->
+                <div class="project-card featured hasani-project" data-category="marketing" data-animate="fade-up"
+                    data-delay="100">
+                    <div class="project-card-inner hasani-card-layout">
+                        <!-- Media Showcase (Video Reels 9:16 + Carousel 5-Slide Preview) -->
+                        <div class="project-media-showcase">
+                            <!-- 9:16 Vertical Video Reels Preview -->
+                            <div class="reels-container" id="openVideoModalFromCard">
+                                <div class="media-tag"><i class="fas fa-play-circle"></i> Reels Ads (31.5s)</div>
+                                <video class="reels-video" muted playsinline webkit-playsinline preload="metadata">
+                                    <source src="images/Iklan.mp4" type="video/mp4">
+                                </video>
+                                <div class="reels-play-overlay">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="carousel-hover-hint">
+                                    <i class="fas fa-expand-alt"></i>
+                                    <span>Klik Perbesar Video</span>
+                                </div>
+                            </div>
+
+                            <!-- Carousel 5-Slide Preview -->
+                            <div class="carousel-preview-container" id="openCarouselModal">
+                                <div class="media-tag"><i class="fas fa-images"></i> 5 Slide Desain</div>
+                                <div class="carousel-img-wrapper">
+                                    <img src="images/5 slide desain.jpg" alt="5 Slide Desain Carousel HASANI"
+                                        class="carousel-banner-img">
+                                </div>
+                                <div class="carousel-hover-hint">
+                                    <i class="fas fa-search-plus"></i>
+                                    <span>Klik Perbesar</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Information -->
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-role"><i class="fas fa-bullhorn"></i> Content Editor &amp; Digital
+                                    Marketer</span>
+                                <span class="project-year">Mix Academy Batch 3</span>
+                            </div>
+                            <h3 class="project-title">Digital Marketing Campaign HASANI</h3>
+                            <p class="project-subtitle">Strategi Konversi Media Sosial Toko BAIK (Carousel AIDA &amp;
+                                Video Reels 9:16)</p>
+                            <p class="project-desc">
+                                Kampanye pemasaran digital terpadu untuk produk herbal HASANI (Toko BAIK) dalam program
+                                <strong>Mix Academy Batch 3</strong>. Menerapkan strategi copywriting <strong>AIDA &amp;
+                                    PASTO</strong>
+                                yang mengonversi keresahan audiens dari masalah kelelahan fisik menuju solusi herbal
+                                alami, diperkuat
+                                bukti otoritas resmi <strong>BPOM TR233044221</strong>. Dipadukan dengan identitas
+                                visual brand yang konsisten, video iklan vertikal 31.5 detik dengan *thumb-stopping hook*,
+                                serta dorongan aksi lewat penawaran promo eksklusif <strong>Rp99.000</strong>.
+                            </p>
+                            <div class="project-highlights">
+                                <div class="highlight"><i class="fas fa-film"></i> Video Reels (31.5s, 9:16)</div>
+                                <div class="highlight"><i class="fas fa-layer-group"></i> 5 Slide Carousel AIDA</div>
+                                <div class="highlight"><i class="fas fa-shield-alt"></i> Legalitas BPOM Resmi</div>
+                                <div class="highlight"><i class="fas fa-tag"></i> Penawaran Promo Rp99K</div>
+                            </div>
+                            <div class="project-tech">
+                                <span>Video Editing</span>
+                                <span>Graphic Design</span>
+                                <span>AIDA Copywriting</span>
+                                <span>Social Media Strategy</span>
+                                <span>CRO &amp; Ads</span>
+                            </div>
+                            <div class="project-links">
+                                <button type="button" class="project-link-btn" id="openVideoModalBtn">
+                                    <i class="fas fa-play"></i>
+                                    Tonton Video Reels
+                                </button>
+                                <button type="button" class="project-link-btn btn-secondary-preview" id="viewSlideBtn">
+                                    <i class="fas fa-images"></i>
+                                    Lihat 5 Slide Desain
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1404,6 +1489,54 @@
                     <i class="fab fa-whatsapp"></i>
                     Minta File CV (PDF) via WhatsApp
                 </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal (For HASANI 5 Slide Desain) -->
+    <div class="image-modal-backdrop" id="imageModal" aria-hidden="true">
+        <div class="image-modal-box" role="dialog" aria-labelledby="imageModalTitle">
+            <button class="image-modal-close" id="closeImageModal" aria-label="Tutup Preview">&times;</button>
+            <div class="image-modal-header">
+                <div class="image-modal-header-text">
+                    <h3 class="image-modal-title" id="imageModalTitle">HASANI Herbal — 5 Slide Desain Carousel Instagram
+                    </h3>
+                    <p class="image-modal-desc">Framework AIDA &amp; PASTO • BPOM TR233044221 • Toko BAIK</p>
+                </div>
+                <div class="image-modal-controls">
+                    <button type="button" class="btn-zoom-toggle" id="toggleZoomBtn"
+                        title="Klik untuk beralih mode tampilan">
+                        <i class="fas fa-search-plus" id="zoomBtnIcon"></i>
+                        <span id="zoomBtnText">Mode Baca (Perbesar)</span>
+                    </button>
+                </div>
+            </div>
+            <div class="image-modal-body" id="imageModalBody">
+                <img src="images/5 slide desain.jpg" alt="5 Slide Desain Carousel HASANI" class="image-modal-img"
+                    id="imageModalImg">
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Lightbox Modal (For HASANI 9:16 Video Reels) -->
+    <div class="video-modal-backdrop" id="videoModal" aria-hidden="true">
+        <div class="video-modal-box" role="dialog" aria-labelledby="videoModalTitle">
+            <button class="video-modal-close" id="closeVideoModal" aria-label="Tutup Video">&times;</button>
+            <div class="video-modal-header">
+                <div class="video-modal-header-text">
+                    <h3 class="video-modal-title" id="videoModalTitle"> Video Iklan Reels HASANI Herbal </h3>
+                    <p class="video-modal-desc">Format Vertikal 9:16 • Direct-Response Copywriting AIDA • Toko BAIK</p>
+                </div>
+            </div>
+            <div class="video-modal-body">
+                <div class="reels-modal-phone-frame">
+                    <div class="phone-speaker-notch"></div>
+                    <video class="reels-modal-video" id="modalReelsVideo" controls playsinline webkit-playsinline
+                        controlsList="nofullscreen nodownload" disablePictureInPicture preload="metadata">
+                        <source src="images/Iklan.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutar video.
+                    </video>
+                </div>
             </div>
         </div>
     </div>

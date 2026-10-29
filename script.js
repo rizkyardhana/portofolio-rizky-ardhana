@@ -152,10 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typingElement) {
         const phrases = [
             'Full Stack Web Developer',
+            'Content Editor & Digital Marketer',
             'Software Engineer',
-            'Programmer',
             'Frontend & Backend Specialist',
-            'Web Development Specialist',
             'Co-Founder & CTO Bariz'
         ];
         let phraseIndex = 0;
@@ -480,6 +479,134 @@ document.addEventListener('DOMContentLoaded', () => {
                 cvModal.classList.remove('active');
                 cvModal.setAttribute('aria-hidden', 'true');
                 document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // ============ Image Lightbox Modal (HASANI 5 Slide Desain) ============
+    const imageModal = document.getElementById('imageModal');
+    const closeImageModalBtn = document.getElementById('closeImageModal');
+    const openCarouselModal = document.getElementById('openCarouselModal');
+    const viewSlideBtn = document.getElementById('viewSlideBtn');
+    const imageModalImg = document.getElementById('imageModalImg');
+    const toggleZoomBtn = document.getElementById('toggleZoomBtn');
+    const zoomBtnText = document.getElementById('zoomBtnText');
+    const zoomBtnIcon = document.getElementById('zoomBtnIcon');
+    const imageModalBody = document.getElementById('imageModalBody');
+
+    function openImageModal() {
+        if (!imageModal) return;
+        imageModal.classList.add('active');
+        imageModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        // Reset zoom to fit mode by default
+        if (imageModalImg) imageModalImg.classList.remove('zoomed');
+        if (zoomBtnText) zoomBtnText.textContent = 'Mode Baca (Perbesar)';
+        if (zoomBtnIcon) {
+            zoomBtnIcon.className = 'fas fa-search-plus';
+        }
+        if (imageModalBody) imageModalBody.scrollTop = 0;
+    }
+
+    function closeImageModal() {
+        if (!imageModal) return;
+        imageModal.classList.remove('active');
+        imageModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (imageModalImg) imageModalImg.classList.remove('zoomed');
+    }
+
+    function toggleZoom() {
+        if (!imageModalImg) return;
+        const isZoomed = imageModalImg.classList.toggle('zoomed');
+        if (isZoomed) {
+            if (zoomBtnText) zoomBtnText.textContent = 'Fit Layar (Semua Slide)';
+            if (zoomBtnIcon) {
+                zoomBtnIcon.className = 'fas fa-compress-arrows-alt';
+            }
+            if (imageModalBody) imageModalBody.scrollTop = 0;
+        } else {
+            if (zoomBtnText) zoomBtnText.textContent = 'Mode Baca (Perbesar)';
+            if (zoomBtnIcon) {
+                zoomBtnIcon.className = 'fas fa-search-plus';
+            }
+        }
+    }
+
+    if (openCarouselModal) {
+        openCarouselModal.addEventListener('click', openImageModal);
+    }
+    if (viewSlideBtn) {
+        viewSlideBtn.addEventListener('click', openImageModal);
+    }
+    if (closeImageModalBtn) {
+        closeImageModalBtn.addEventListener('click', closeImageModal);
+    }
+    if (toggleZoomBtn) {
+        toggleZoomBtn.addEventListener('click', toggleZoom);
+    }
+    if (imageModalImg) {
+        imageModalImg.addEventListener('click', toggleZoom);
+    }
+    if (imageModal) {
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal || e.target === imageModalBody) {
+                closeImageModal();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+                closeImageModal();
+            }
+        });
+    }
+
+    // ============ Video Lightbox Modal (HASANI 9:16 Reels) ============
+    const videoModal = document.getElementById('videoModal');
+    const closeVideoModalBtn = document.getElementById('closeVideoModal');
+    const openVideoModalBtn = document.getElementById('openVideoModalBtn');
+    const openVideoModalFromCard = document.getElementById('openVideoModalFromCard');
+    const modalReelsVideo = document.getElementById('modalReelsVideo');
+
+    function openVideoModal() {
+        if (!videoModal) return;
+        videoModal.classList.add('active');
+        videoModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        if (modalReelsVideo) {
+            modalReelsVideo.currentTime = 0;
+            modalReelsVideo.play().catch(() => {});
+        }
+    }
+
+    function closeVideoModal() {
+        if (!videoModal) return;
+        videoModal.classList.remove('active');
+        videoModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (modalReelsVideo) {
+            modalReelsVideo.pause();
+        }
+    }
+
+    if (openVideoModalBtn) {
+        openVideoModalBtn.addEventListener('click', openVideoModal);
+    }
+    if (openVideoModalFromCard) {
+        openVideoModalFromCard.addEventListener('click', openVideoModal);
+    }
+    if (closeVideoModalBtn) {
+        closeVideoModalBtn.addEventListener('click', closeVideoModal);
+    }
+    if (videoModal) {
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                closeVideoModal();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+                closeVideoModal();
             }
         });
     }
