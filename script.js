@@ -534,11 +534,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (openCarouselModal) {
-        openCarouselModal.addEventListener('click', openImageModal);
+        openCarouselModal.addEventListener('click', () => {
+            if (imageModalImg) imageModalImg.src = 'images/5 slide desain.jpg';
+            const modalTitle = document.getElementById('imageModalTitle');
+            if (modalTitle) modalTitle.textContent = 'HASANI Herbal — 5 Slide Desain Carousel Instagram';
+            openImageModal();
+        });
     }
     if (viewSlideBtn) {
-        viewSlideBtn.addEventListener('click', openImageModal);
+        viewSlideBtn.addEventListener('click', () => {
+            if (imageModalImg) imageModalImg.src = 'images/5 slide desain.jpg';
+            const modalTitle = document.getElementById('imageModalTitle');
+            if (modalTitle) modalTitle.textContent = 'HASANI Herbal — 5 Slide Desain Carousel Instagram';
+            openImageModal();
+        });
     }
+
+    // Click individual slide to open high-res lightbox
+    document.querySelectorAll('.hasani-slide .slide-visual-card').forEach((card, idx) => {
+        card.addEventListener('click', () => {
+            const img = card.querySelector('img');
+            if (img && imageModalImg) {
+                imageModalImg.src = img.src;
+                const modalTitle = document.getElementById('imageModalTitle');
+                if (modalTitle) {
+                    modalTitle.textContent = `HASANI Herbal — Slide ${idx + 1} dari 5 (Desain Instagram)`;
+                }
+                openImageModal();
+            }
+        });
+    });
     if (closeImageModalBtn) {
         closeImageModalBtn.addEventListener('click', closeImageModal);
     }

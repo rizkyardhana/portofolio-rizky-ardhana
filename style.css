@@ -3483,172 +3483,6 @@ a.contact-card-value:hover {
 /* ===================================================
    HASANI Project Card & Media Showcase (Reels + Carousel)
    =================================================== */
-.hasani-card-layout {
-    display: grid !important;
-    grid-template-columns: 1.15fr 1fr !important;
-}
-
-.project-media-showcase {
-    position: relative;
-    display: flex;
-    gap: 16px;
-    padding: 24px;
-    background: radial-gradient(circle at center, rgba(33, 64, 154, 0.15) 0%, rgba(0, 161, 75, 0.08) 50%, rgba(10, 10, 15, 0.7) 100%);
-    align-items: center;
-    justify-content: center;
-    border-right: 1px solid var(--border-subtle);
-    overflow: hidden;
-}
-
-/* 9:16 Vertical Video Reels Frame */
-.reels-container {
-    position: relative;
-    width: 175px;
-    height: 310px;
-    border-radius: 20px;
-    overflow: hidden;
-    background: #000;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 161, 75, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.12);
-    flex-shrink: 0;
-    cursor: pointer;
-    transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
-}
-
-.reels-container:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(33, 64, 154, 0.35);
-}
-
-.reels-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    background: #000;
-}
-
-/* Play/Pause Overlay inside Phone Frame */
-.reels-play-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 2;
-}
-
-.reels-play-overlay i {
-    width: 48px;
-    height: 48px;
-    background: rgba(0, 161, 75, 0.9);
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.15rem;
-    padding-left: 3px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 161, 75, 0.4);
-    transition: transform 0.3s ease;
-}
-
-.reels-container:hover .reels-play-overlay i {
-    transform: scale(1.1);
-}
-
-.reels-container.playing .reels-play-overlay {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* 5-Slide Carousel Preview Container */
-.carousel-preview-container {
-    position: relative;
-    flex: 1;
-    height: 310px;
-    border-radius: 20px;
-    overflow: hidden;
-    background: #0e1017;
-    border: 2px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(33, 64, 154, 0.2);
-    cursor: pointer;
-    transition: transform 0.4s var(--ease-out), border-color 0.4s var(--ease-out);
-}
-
-.carousel-preview-container:hover {
-    transform: translateY(-4px) scale(1.02);
-    border-color: rgba(0, 161, 75, 0.5);
-}
-
-.carousel-img-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.carousel-banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    transition: transform 0.6s var(--ease-out);
-}
-
-.carousel-preview-container:hover .carousel-banner-img {
-    transform: scale(1.05);
-}
-
-.carousel-hover-hint {
-    position: absolute;
-    inset: 0;
-    background: rgba(10, 10, 15, 0.6);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: #fff;
-    font-size: 0.85rem;
-    font-weight: 600;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    backdrop-filter: blur(3px);
-}
-
-.carousel-preview-container:hover .carousel-hover-hint {
-    opacity: 1;
-}
-
-.carousel-hover-hint i {
-    font-size: 1.5rem;
-    color: #00A14B;
-}
-
-.media-tag {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 3;
-    background: rgba(10, 10, 15, 0.75);
-    color: #fff;
-    font-size: 0.72rem;
-    font-weight: 600;
-    padding: 5px 12px;
-    border-radius: var(--radius-full);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
 .color-pill {
     display: inline-flex;
     align-items: center;
@@ -4111,39 +3945,46 @@ a.contact-card-value:hover {
 /* 2. Media Showcase Layout */
 .hasani-card-layout {
     display: grid !important;
-    grid-template-columns: 1.25fr 1fr !important;
+    grid-template-columns: 1.28fr 1fr !important;
+    align-items: center !important;
 }
 
 .hasani-card-layout .project-media-showcase {
     display: flex;
     gap: 16px;
-    padding: 22px;
+    padding: 22px 20px;
     background: radial-gradient(circle at center, rgba(33, 64, 154, 0.18) 0%, rgba(0, 161, 75, 0.1) 50%, #0a0a0f 100%);
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    box-sizing: border-box;
 }
 
 /* 3. Custom Reels Phone Player (9:16) */
 .reels-player-wrapper {
-    width: 175px;
+    width: 185px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    height: 380px;
+    justify-content: space-between;
 }
 
 .reels-header-pill {
-    font-size: 0.7rem;
-    font-weight: 600;
+    font-size: 0.72rem;
+    font-weight: 700;
     color: #fff;
-    background: rgba(10, 10, 15, 0.85);
-    padding: 5px 10px;
+    background: rgba(10, 10, 15, 0.9);
+    padding: 6px 10px;
     border-radius: 8px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
+    flex-shrink: 0;
 }
 
 .reels-header-pill i {
@@ -4153,13 +3994,14 @@ a.contact-card-value:hover {
 .reels-phone-mockup {
     position: relative;
     width: 100%;
-    height: 330px;
+    height: 340px;
     border-radius: 20px;
     overflow: hidden;
     background: #000;
     border: 2px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 161, 75, 0.2);
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .reels-video-element {
@@ -4247,57 +4089,63 @@ a.contact-card-value:hover {
 .hasani-carousel-wrapper {
     flex: 1;
     min-width: 0;
+    height: 380px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: rgba(14, 16, 23, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(14, 16, 23, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 20px;
-    padding: 14px;
+    padding: 12px 14px;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
 }
 
 .carousel-top-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
 }
 
 .carousel-title-badge {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 7px !important;
 }
 
 .carousel-title-badge i {
-    color: #00A14B;
+    color: #00A14B !important;
+    font-size: 0.85rem;
 }
 
 .carousel-counter-badge {
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: #00A14B;
-    background: rgba(0, 161, 75, 0.15);
-    border: 1px solid rgba(0, 161, 75, 0.3);
-    padding: 3px 10px;
-    border-radius: var(--radius-full);
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    color: #34d399 !important;
+    background: rgba(16, 185, 129, 0.2) !important;
+    border: 1px solid rgba(16, 185, 129, 0.45) !important;
+    padding: 3px 10px !important;
+    border-radius: var(--radius-full) !important;
 }
 
 /* Slider Track & Slide Items */
 .hasani-slider-viewport {
     position: relative;
     width: 100%;
-    height: 235px;
+    flex: 1;
+    min-height: 0;
     overflow: hidden;
-    border-radius: 14px;
+    border-radius: 12px;
     margin: 8px 0;
     touch-action: pan-y;
     user-select: none;
+    background: #06070a;
 }
 
 .hasani-slider-track {
@@ -4312,19 +4160,124 @@ a.contact-card-value:hover {
     width: 100%;
     height: 100%;
     padding: 2px;
+    box-sizing: border-box;
 }
 
-.slide-card-content {
+/* Individual Visual Artwork Card */
+.slide-visual-card {
+    position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 14px;
-    padding: 20px 18px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: radial-gradient(circle at center, rgba(33, 64, 154, 0.25) 0%, #080a10 80%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    text-align: left;
-    position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+}
+
+.slide-artwork-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.slide-visual-card:hover .slide-artwork-img {
+    transform: scale(1.02);
+}
+
+.slide-badge-overlay {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(10, 10, 15, 0.88);
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: var(--radius-full);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    z-index: 3;
+}
+
+.slide-badge-overlay i {
+    color: #00A14B;
+}
+
+.slide-badge-overlay.promo-accent {
+    border-color: rgba(0, 161, 75, 0.5);
+    background: rgba(0, 161, 75, 0.35);
+}
+
+.slide-badge-overlay.promo-accent i {
+    color: #34d399;
+}
+
+/* Slider Controls (Prev, Next, Dots) */
+.carousel-controls-bar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    padding-top: 4px !important;
+    flex-shrink: 0 !important;
+}
+
+.slider-nav-btn {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.8rem !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    flex-shrink: 0 !important;
+}
+
+.slider-nav-btn:hover {
+    background: #00A14B !important;
+    border-color: #00A14B !important;
+    transform: scale(1.08) !important;
+}
+
+.slider-dots {
+    display: flex !important;
+    gap: 6px !important;
+    align-items: center !important;
+}
+
+.slider-dot {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.3) !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    transition: all 0.25s ease !important;
+}
+
+.slider-dot.active {
+    width: 22px !important;
+    border-radius: 6px !important;
+    background: #00A14B !important;
 }
 
 /* Slide Card Themes (Toko BAIK: Hijau #00A14B & Biru #21409A) */
@@ -4660,15 +4613,25 @@ a.contact-card-value:hover {
         grid-template-columns: 1fr !important;
     }
     .hasani-card-layout .project-media-showcase {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column !important;
+        align-items: center !important;
+        border-right: none !important;
+        border-bottom: 1px solid var(--border-subtle) !important;
+        padding: 20px 16px !important;
+        gap: 20px !important;
     }
     .reels-player-wrapper {
-        width: 100%;
-        max-width: 230px;
+        width: 100% !important;
+        max-width: 210px !important;
+        height: auto !important;
+    }
+    .reels-phone-mockup {
+        height: 360px !important;
     }
     .hasani-carousel-wrapper {
-        width: 100%;
+        width: 100% !important;
+        max-width: 440px !important;
+        height: 360px !important;
     }
 }
 
