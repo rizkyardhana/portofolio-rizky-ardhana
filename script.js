@@ -611,6 +611,160 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ============ HASANI Interactive 5-Slide Carousel ============
+    const hasaniSliderTrack = document.getElementById('hasaniSliderTrack');
+    const hasaniSlides = document.querySelectorAll('.hasani-slide');
+    const sliderPrevBtn = document.getElementById('sliderPrevBtn');
+    const sliderNextBtn = document.getElementById('sliderNextBtn');
+    const sliderDots = document.querySelectorAll('.slider-dot');
+    const carouselCounter = document.getElementById('carouselCounter');
+    const hasaniSliderViewport = document.getElementById('hasaniSliderViewport');
+
+    let currentHasaniSlide = 0;
+    const totalHasaniSlides = hasaniSlides.length || 5;
+
+    function goToHasaniSlide(index) {
+        if (!hasaniSliderTrack) return;
+        currentHasaniSlide = (index + totalHasaniSlides) % totalHasaniSlides;
+        hasaniSliderTrack.style.transform = `translateX(-${currentHasaniSlide * 100}%)`;
+
+        // Update dot indicators
+        sliderDots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentHasaniSlide);
+        });
+
+        // Update counter "Slide X / 5"
+        if (carouselCounter) {
+            carouselCounter.textContent = `Slide ${currentHasaniSlide + 1} / ${totalHasaniSlides}`;
+        }
+    }
+
+    if (sliderPrevBtn) {
+        sliderPrevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            goToHasaniSlide(currentHasaniSlide - 1);
+        });
+    }
+
+    if (sliderNextBtn) {
+        sliderNextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            goToHasaniSlide(currentHasaniSlide + 1);
+        });
+    }
+
+    sliderDots.forEach((dot, idx) => {
+        dot.addEventListener('click', (e) => {
+            e.stopPropagation();
+            goToHasaniSlide(idx);
+        });
+    });
+
+    // Touch Swipe Gesture Support for Mobile
+    if (hasaniSliderViewport) {
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        hasaniSliderViewport.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        hasaniSliderViewport.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const threshold = 40;
+            if (touchEndX < touchStartX - threshold) {
+                goToHasaniSlide(currentHasaniSlide + 1);
+            } else if (touchEndX > touchStartX + threshold) {
+                goToHasaniSlide(currentHasaniSlide - 1);
+            }
+        }, { passive: true });
+    }
+
+    // ============ HASANI In-Card Video Reels Controller ============
+    const cardReelsVideo = document.getElementById('cardReelsVideo');
+    const reelsPlayToggleBtn = document.getElementById('reelsPlayToggleBtn');
+    const reelsPlayIcon = document.getElementById('reelsPlayIcon');
+    const reelsCustomOverlay = document.getElementById('reelsCustomOverlay');
+    const reelsTimeDisplay = document.getElementById('reelsTimeDisplay');
+    const reelsMuteBtn = document.getElementById('reelsMuteBtn');
+    const reelsMuteIcon = document.getElementById('reelsMuteIcon');
+
+    function formatVideoTime(seconds) {
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    if (cardReelsVideo) {
+        function toggleCardReelsPlay(e) {
+            if (e) e.stopPropagation();
+            if (cardReelsVideo.paused) {
+                cardReelsVideo.play().then(() => {
+                    if (reelsPlayIcon) reelsPlayIcon.className = 'fas fa-pause';
+                    if (reelsCustomOverlay) reelsCustomOverlay.style.opacity = '0';
+                }).catch(() => {});
+            } else {
+                cardReelsVideo.pause();
+                if (reelsPlayIcon) reelsPlayIcon.className = 'fas fa-play';
+                if (reelsCustomOverlay) reelsCustomOverlay.style.opacity = '1';
+            }
+        }
+
+        if (reelsPlayToggleBtn) reelsPlayToggleBtn.addEventListener('click', toggleCardReelsPlay);
+        if (reelsCustomOverlay) reelsCustomOverlay.addEventListener('click', toggleCardReelsPlay);
+
+        cardReelsVideo.addEventListener('timeupdate', () => {
+            if (reelsTimeDisplay && cardReelsVideo.duration) {
+                reelsTimeDisplay.textContent = `${formatVideoTime(cardReelsVideo.currentTime)} / ${formatVideoTime(cardReelsVideo.duration || 31.5)}`;
+            }
+        });
+
+        cardReelsVideo.addEventListener('ended', () => {
+            if (reelsPlayIcon) reelsPlayIcon.className = 'fas fa-play';
+            if (reelsCustomOverlay) reelsCustomOverlay.style.opacity = '1';
+        });
+
+        if (reelsMuteBtn && reelsMuteIcon) {
+            reelsMuteBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                cardReelsVideo.muted = !cardReelsVideo.muted;
+                reelsMuteIcon.className = cardReelsVideo.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+            });
+        }
+    }
+
+    // ============ Case Study Detail Modal ============
+    const openCaseStudyBtn = document.getElementById('openCaseStudyBtn');
+    const closeCaseStudyModalBtn = document.getElementById('closeCaseStudyModal');
+    const caseStudyModal = document.getElementById('caseStudyModal');
+
+    function openCaseStudyModal() {
+        if (!caseStudyModal) return;
+        caseStudyModal.classList.add('active');
+        caseStudyModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeCaseStudyModal() {
+        if (!caseStudyModal) return;
+        caseStudyModal.classList.remove('active');
+        caseStudyModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    if (openCaseStudyBtn) openCaseStudyBtn.addEventListener('click', openCaseStudyModal);
+    if (closeCaseStudyModalBtn) closeCaseStudyModalBtn.addEventListener('click', closeCaseStudyModal);
+    if (caseStudyModal) {
+        caseStudyModal.addEventListener('click', (e) => {
+            if (e.target === caseStudyModal) closeCaseStudyModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && caseStudyModal.classList.contains('active')) {
+                closeCaseStudyModal();
+            }
+        });
+    }
+
     // ============ Smooth Scroll for Anchor Links ============
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {

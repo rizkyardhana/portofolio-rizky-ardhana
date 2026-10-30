@@ -516,6 +516,9 @@
                 <button class="filter-btn" data-filter="marketing">
                     <span>Digital Marketing &amp; Media</span>
                 </button>
+                <button class="filter-btn" data-filter="mix-academy">
+                    <span>🎓 Mix Academy</span>
+                </button>
                 <button class="filter-btn" data-filter="company">
                     <span>Company &amp; Profil</span>
                 </button>
@@ -565,37 +568,141 @@
                     </div>
                 </div>
 
-                <!-- Project Card: HASANI Campaign -->
-                <div class="project-card featured hasani-project" data-category="marketing" data-animate="fade-up"
+                <!-- Project Card: HASANI Campaign (Mix Academy Dedicated Section) -->
+                <div class="project-card featured hasani-project" data-category="marketing mix-academy" data-animate="fade-up"
                     data-delay="100">
+                    <!-- Status & Brand Header Bar -->
+                    <div class="hasani-card-badge-bar">
+                        <span class="status-badge-simulasi">
+                            <i class="fas fa-graduation-cap"></i> Proyek Praktik Mix Academy Batch 3
+                        </span>
+                        <span class="status-badge-brand">
+                            <i class="fas fa-leaf"></i> Toko BAIK • HASANI Herbal
+                        </span>
+                    </div>
+
                     <div class="project-card-inner hasani-card-layout">
-                        <!-- Media Showcase (Video Reels 9:16 + Carousel 5-Slide Preview) -->
+                        <!-- Media Showcase: Video Reels (9:16) + Interactive 5-Slide Carousel -->
                         <div class="project-media-showcase">
-                            <!-- 9:16 Vertical Video Reels Preview -->
-                            <div class="reels-container" id="openVideoModalFromCard">
-                                <div class="media-tag"><i class="fas fa-play-circle"></i> Reels Ads (31.5s)</div>
-                                <video class="reels-video" muted playsinline webkit-playsinline preload="metadata">
-                                    <source src="images/Iklan.mp4?v=2#t=0.001" type="video/mp4">
-                                </video>
-                                <div class="reels-play-overlay">
-                                    <i class="fas fa-play"></i>
+                            <!-- 1. Player Video Reels Vertikal 9:16 -->
+                            <div class="reels-player-wrapper">
+                                <div class="reels-header-pill">
+                                    <i class="fas fa-play-circle"></i> Reels Ads • 31.5s
                                 </div>
-                                <div class="carousel-hover-hint">
-                                    <i class="fas fa-expand-alt"></i>
-                                    <span>Klik Perbesar Video</span>
+                                <div class="reels-phone-mockup" id="reelsPhoneMockup">
+                                    <video class="reels-video-element" id="cardReelsVideo" playsinline webkit-playsinline preload="metadata">
+                                        <source src="images/Iklan.mp4?v=2#t=0.001" type="video/mp4">
+                                    </video>
+                                    <!-- Custom Play Overlay -->
+                                    <div class="reels-custom-overlay" id="reelsCustomOverlay">
+                                        <button type="button" class="reels-play-btn" id="reelsPlayToggleBtn" aria-label="Play/Pause Video">
+                                            <i class="fas fa-play" id="reelsPlayIcon"></i>
+                                        </button>
+                                    </div>
+                                    <!-- Bottom Controls: Time & Mute -->
+                                    <div class="reels-bottom-controls">
+                                        <span class="reels-time-pill" id="reelsTimeDisplay">00:00 / 00:31</span>
+                                        <button type="button" class="reels-mute-btn" id="reelsMuteBtn" aria-label="Mute/Unmute Video">
+                                            <i class="fas fa-volume-mute" id="reelsMuteIcon"></i>
+                                        </button>
+                                    </div>
+                                    <div class="carousel-hover-hint" id="openVideoModalFromCard" title="Klik untuk mode layar penuh">
+                                        <i class="fas fa-expand-alt"></i>
+                                        <span>Perbesar Video</span>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Carousel 5-Slide Preview -->
-                            <div class="carousel-preview-container" id="openCarouselModal">
-                                <div class="media-tag"><i class="fas fa-images"></i> 5 Slide Desain</div>
-                                <div class="carousel-img-wrapper">
-                                    <img src="images/5 slide desain.jpg" alt="5 Slide Desain Carousel HASANI"
-                                        class="carousel-banner-img">
+                            <!-- 2. Slider Carousel 5 Slide Individual Interaktif -->
+                            <div class="hasani-carousel-wrapper">
+                                <div class="carousel-top-bar">
+                                    <span class="carousel-title-badge">
+                                        <i class="fas fa-layer-group"></i> 5 Slide Carousel (AIDA)
+                                    </span>
+                                    <!-- Indikator Nomor Slide -->
+                                    <span class="carousel-counter-badge" id="carouselCounter">Slide 1 / 5</span>
                                 </div>
-                                <div class="carousel-hover-hint">
-                                    <i class="fas fa-search-plus"></i>
-                                    <span>Klik Perbesar</span>
+
+                                <!-- Slider Viewport -->
+                                <div class="hasani-slider-viewport" id="hasaniSliderViewport">
+                                    <div class="hasani-slider-track" id="hasaniSliderTrack">
+                                        
+                                        <!-- Slide 1: Hook / Headline -->
+                                        <div class="hasani-slide" data-slide-index="1">
+                                            <div class="slide-card-content slide-theme-hook">
+                                                <span class="slide-tag">Slide 01 • Hook (Attention)</span>
+                                                <div class="slide-icon-visual"><i class="fas fa-bolt"></i></div>
+                                                <h4 class="slide-headline">2 Bahan Alami dalam 1 Botol Praktis</h4>
+                                                <p class="slide-copy">"2 bahan alami dalam 1 botol, untuk badan yang terasa lebih segar dan fit menjalani hari produktif."</p>
+                                                <div class="slide-pill-feature">Habbatussauda + Brazilian Propolis</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Slide 2: Problem -->
+                                        <div class="hasani-slide" data-slide-index="2">
+                                            <div class="slide-card-content slide-theme-problem">
+                                                <span class="slide-tag">Slide 02 • Problem (Interest)</span>
+                                                <div class="slide-icon-visual"><i class="fas fa-bed"></i></div>
+                                                <h4 class="slide-headline">Badan Pegal, Cepat Lelah, &amp; Lesu?</h4>
+                                                <p class="slide-copy">Rutinitas kerja padat dan duduk lama di depan laptop bikin energi cepat habis serta daya tahan gampang drop.</p>
+                                                <div class="slide-pill-feature">Tantangan Harian Pekerja Modern</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Slide 3: Solution -->
+                                        <div class="hasani-slide" data-slide-index="3">
+                                            <div class="slide-card-content slide-theme-solution">
+                                                <span class="slide-tag">Slide 03 • Solution (Desire)</span>
+                                                <div class="slide-icon-visual"><i class="fas fa-capsules"></i></div>
+                                                <h4 class="slide-headline">Sinergi Habbatussauda + Brazilian Propolis</h4>
+                                                <p class="slide-copy">Formulasi antioksidan ganda dalam bentuk kapsul praktis. Nutrisi terserap optimal tanpa rasa pahit.</p>
+                                                <div class="slide-pill-feature">Ekstrak Alami Pilihan • Toko BAIK</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Slide 4: Authority & Trust -->
+                                        <div class="hasani-slide" data-slide-index="4">
+                                            <div class="slide-card-content slide-theme-authority">
+                                                <span class="slide-tag">Slide 04 • Trust &amp; Otoritas</span>
+                                                <div class="slide-icon-visual"><i class="fas fa-shield-alt"></i></div>
+                                                <h4 class="slide-headline">Terdaftar Resmi BPOM &amp; Teruji</h4>
+                                                <p class="slide-copy">Aman dikonsumsi harian dengan sertifikasi resmi dan rating kepuasan konsumen tinggi.</p>
+                                                <div class="slide-proof-badges">
+                                                    <span class="bpom-chip"><i class="fas fa-certificate"></i> BPOM TR233044221</span>
+                                                    <span class="rating-chip"><i class="fas fa-star"></i> 4.8 / 5.0 (Rating Toko)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Slide 5: Offer & CTA -->
+                                        <div class="hasani-slide" data-slide-index="5">
+                                            <div class="slide-card-content slide-theme-cta">
+                                                <span class="slide-tag">Slide 05 • Offer &amp; CTA (Action)</span>
+                                                <div class="slide-icon-visual"><i class="fas fa-tags"></i></div>
+                                                <h4 class="slide-headline">Promo Terbatas Rp99.000 / Botol</h4>
+                                                <p class="slide-copy">Paket Hemat 2 Botol hanya Rp189.000 + Bonus Minuman Segar Herbal Biotawa.</p>
+                                                <div class="slide-pill-feature promo-accent">Beli Sekarang • Toko BAIK</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Slider Navigation Controls (Touch & Click Friendly) -->
+                                <div class="carousel-controls-bar">
+                                    <button type="button" class="slider-nav-btn prev" id="sliderPrevBtn" aria-label="Slide Sebelumnya">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <div class="slider-dots" id="sliderDots">
+                                        <button class="slider-dot active" data-index="0" aria-label="Menuju Slide 1"></button>
+                                        <button class="slider-dot" data-index="1" aria-label="Menuju Slide 2"></button>
+                                        <button class="slider-dot" data-index="2" aria-label="Menuju Slide 3"></button>
+                                        <button class="slider-dot" data-index="3" aria-label="Menuju Slide 4"></button>
+                                        <button class="slider-dot" data-index="4" aria-label="Menuju Slide 5"></button>
+                                    </div>
+                                    <button type="button" class="slider-nav-btn next" id="sliderNextBtn" aria-label="Slide Berikutnya">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -603,13 +710,11 @@
                         <!-- Project Information -->
                         <div class="project-info">
                             <div class="project-meta">
-                                <span class="project-role"><i class="fas fa-bullhorn"></i> Content Editor &amp; Digital
-                                    Marketer</span>
+                                <span class="project-role"><i class="fas fa-bullhorn"></i> Content Editor, Copywriter, &amp; Video Editor</span>
                                 <span class="project-year">Mix Academy Batch 3</span>
                             </div>
                             <h3 class="project-title">Digital Marketing Campaign HASANI</h3>
-                            <p class="project-subtitle">Strategi Konversi Media Sosial Toko BAIK (Carousel AIDA &amp;
-                                Video Reels 9:16)</p>
+                            <p class="project-subtitle">Strategi Konversi Media Sosial Toko BAIK (Carousel AIDA &amp; Video Reels 9:16)</p>
                             <p class="project-desc">
                                 Kampanye pemasaran digital terpadu untuk produk herbal HASANI (Toko BAIK) dalam program
                                 <strong>Mix Academy Batch 3</strong>. Menerapkan strategi copywriting <strong>AIDA &amp;
@@ -627,21 +732,33 @@
                                 <div class="highlight"><i class="fas fa-tag"></i> Penawaran Promo Rp99K</div>
                             </div>
                             <div class="project-tech">
-                                <span>Video Editing</span>
-                                <span>Graphic Design</span>
+                                <span>Canva (Carousel)</span>
+                                <span>CapCut (Reels 9:16)</span>
+                                <span>AI Voice Synthesis</span>
                                 <span>AIDA Copywriting</span>
-                                <span>Social Media Strategy</span>
-                                <span>CRO &amp; Ads</span>
+                                <span>Mobile CRO</span>
                             </div>
                             <div class="project-links">
                                 <button type="button" class="project-link-btn" id="openVideoModalBtn">
                                     <i class="fas fa-play"></i>
                                     Tonton Video Reels
                                 </button>
+                                <button type="button" class="project-link-btn btn-secondary-preview" id="openCaseStudyBtn">
+                                    <i class="fas fa-book-open"></i>
+                                    Baca Case Study Lengkap
+                                </button>
                                 <button type="button" class="project-link-btn btn-secondary-preview" id="viewSlideBtn">
                                     <i class="fas fa-images"></i>
-                                    Lihat 5 Slide Desain
+                                    Lihat Poster 5 Slide
                                 </button>
+                            </div>
+
+                            <!-- Data Accreditation & Simulation Status Disclaimer -->
+                            <div class="project-disclaimer-box">
+                                <i class="fas fa-info-circle"></i>
+                                <p>
+                                    <strong>Klarifikasi Data:</strong> Nomor registrasi BPOM (TR233044221), rating kepuasan 4.8/5, dan struktur penawaran promo adalah data resmi dari brief simulasi produk HASANI (Toko BAIK) selama pelatihan Mix Academy Batch 3.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1536,6 +1653,59 @@
                         <source src="images/Iklan.mp4?v=2" type="video/mp4">
                         Browser Anda tidak mendukung pemutar video.
                     </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Study Detail Modal: HASANI Campaign Mix Academy -->
+    <div class="case-study-modal-backdrop" id="caseStudyModal" aria-hidden="true">
+        <div class="case-study-modal-box" role="dialog" aria-labelledby="caseStudyTitle">
+            <button class="case-study-modal-close" id="closeCaseStudyModal" aria-label="Tutup Dialog">&times;</button>
+            <div class="case-study-modal-header">
+                <span class="modal-badge-simulasi"><i class="fas fa-graduation-cap"></i> Proyek Praktik Mix Academy Batch 3</span>
+                <h3 class="case-study-modal-title" id="caseStudyTitle">Dokumentasi Proses Kreatif — Kampanye HASANI Herbal</h3>
+                <p class="case-study-modal-subtitle">Toko BAIK • Content Editor, Copywriter, &amp; Video Editor</p>
+            </div>
+            <div class="case-study-modal-body">
+                <div class="case-study-section">
+                    <h4><i class="fas fa-bullseye"></i> 1. Tujuan Konten &amp; Target Audiens</h4>
+                    <p>Meningkatkan <em>health awareness</em> mengenai suplemen herbal ganda dan mendorong konversi penjualan di marketplace (Toko BAIK). Target audiens adalah pekerja kantoran, profesional muda, dan masyarakat urban usia 25–45 tahun yang rentan mengalami kelelahan fisik dan penurunan daya tahan tubuh.</p>
+                </div>
+
+                <div class="case-study-section">
+                    <h4><i class="fas fa-tools"></i> 2. Aplikasi &amp; Tools yang Digunakan</h4>
+                    <ul>
+                        <li><strong>Canva:</strong> Perancangan tata letak visual 5-Slide Carousel Instagram feed dengan hierarki tipografi dan komposisi produk proporsional.</li>
+                        <li><strong>CapCut:</strong> Editing video vertikal 9:16 (durasi 31.5 detik), subtitle tebal beranimasi kinetik, penataan <em>speed ramp</em>, dan <em>sound effects</em> dinamis.</li>
+                        <li><strong>AI Voice Synthesis:</strong> Sintesis suara narasi (voiceover) yang natural, ramah, dan bernada meyakinkan untuk audiens dewasa.</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4><i class="fas fa-paint-brush"></i> 3. Konsep Desain &amp; Identitas Brand</h4>
+                    <p>Mengadopsi identitas visual resmi Toko BAIK: <strong>Hijau Herbal (#00A14B)</strong> yang melambangkan kesegaran alami dan vitalitas tubuh, dipadukan dengan <strong>Biru Otoritas (#21409A)</strong> yang melambangkan kebersihan laboratorium, higienitas, dan integritas medis.</p>
+                </div>
+
+                <div class="case-study-section">
+                    <h4><i class="fas fa-list-ol"></i> 4. Alur Copywriting AIDA (5 Slide Carousel)</h4>
+                    <ul>
+                        <li><strong>Slide 1 (Attention):</strong> Hook visual botol praktis &amp; headline <em>"2 bahan alami dalam 1 botol, untuk badan yang terasa lebih segar."</em></li>
+                        <li><strong>Slide 2 (Interest):</strong> Pertanyaan empati yang merefleksikan keresahan pekerja lembur: <em>"Badan pegal, cepat lelah, dan lesu?"</em></li>
+                        <li><strong>Slide 3 (Desire):</strong> Penjelasan sinergi formulasi Habbatussauda + Brazilian Propolis dalam kapsul praktis tanpa rasa pahit.</li>
+                        <li><strong>Slide 4 (Validation):</strong> Membangun rasa aman konsumen lewat nomor izin edar resmi <strong>BPOM TR233044221</strong> &amp; rating kepuasan 4.8 / 5.0.</li>
+                        <li><strong>Slide 5 (Action):</strong> Tawaran penutup promo diskon Rp99.000/botol serta paket bundling hemat 2 botol Rp189.000 + Bonus Biotawa.</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4><i class="fas fa-film"></i> 5. Strategi Video Reels 31.5 Detik</h4>
+                    <p>Menggunakan <em>thumb-stopping hook</em> di detik 0–3 untuk menghentikan scrolling jempol pengguna, disusul pemaparan masalah keletihan harian (detik 4–15), perkenalan solusi BPOM (detik 16–25), dan diakhiri dengan dorongan promosi harga khusus yang lugas.</p>
+                </div>
+
+                <div class="case-study-section case-study-note">
+                    <i class="fas fa-certificate"></i>
+                    <p><strong>Catatan Klarifikasi Data &amp; Akreditasi:</strong> Nomor registrasi BPOM (TR233044221), rating kepuasan 4.8/5, dan struktur promo Rp99.000 bersumber dari brief studi kasus produk HASANI (Toko BAIK) dalam program pelatihan intensif Mix Academy Batch 3.</p>
                 </div>
             </div>
         </div>
