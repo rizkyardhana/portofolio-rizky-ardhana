@@ -439,6 +439,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         });
+
+        // Specialty Pills Navigation Handler
+        document.querySelectorAll('[data-filter-target]').forEach(pill => {
+            pill.addEventListener('click', (e) => {
+                const targetFilter = pill.getAttribute('data-filter-target');
+                if (!targetFilter) return;
+                const targetBtn = document.querySelector(`.filter-btn[data-filter="${targetFilter}"]`);
+                if (targetBtn) {
+                    targetBtn.click();
+                }
+            });
+        });
     }
 
     // ============ CV Download Modal ============

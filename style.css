@@ -4479,7 +4479,7 @@ a.contact-card-value:hover {
 
 .case-study-modal-box {
     position: relative;
-    max-width: 680px;
+    max-width: 860px;
     width: 100%;
     max-height: 90vh;
     background: var(--bg-secondary);
@@ -4491,6 +4491,275 @@ a.contact-card-value:hover {
     flex-direction: column;
     transform: scale(0.96) translateY(15px);
     transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.modal-badge-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.modal-badge-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #93c5fd;
+    background: rgba(33, 64, 154, 0.2);
+    border: 1px solid rgba(33, 64, 154, 0.35);
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+}
+
+/* Quick Overview Meta Cards */
+.cs-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    padding-bottom: 4px;
+}
+
+.cs-meta-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.cs-meta-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-tertiary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 5px;
+}
+
+.cs-meta-val {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.cs-palette-chips {
+    display: flex;
+    align-items: center;
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.color-chip {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: 5px;
+    box-shadow: 0 0 6px currentColor;
+}
+
+.cs-section-lead {
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.cs-bullet-list {
+    padding-left: 20px;
+    margin-top: 6px;
+}
+
+.cs-bullet-list li {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+/* Slide by Slide Deck */
+.cs-slide-breakdown-deck {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.cs-slide-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 12px;
+    align-items: center;
+}
+
+.cs-slide-thumb {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #06070a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cs-slide-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cs-slide-num {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.cs-slide-info h5 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 4px 0 6px 0;
+    line-height: 1.35;
+}
+
+.cs-slide-info p {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    margin: 0;
+}
+
+.cs-pill-framework {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+.hook-tag { background: rgba(0, 161, 75, 0.2); color: #34d399; border: 1px solid rgba(0, 161, 75, 0.4); }
+.problem-tag { background: rgba(239, 68, 68, 0.18); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.35); }
+.solution-tag { background: rgba(33, 64, 154, 0.25); color: #93c5fd; border: 1px solid rgba(33, 64, 154, 0.45); }
+.trust-tag { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4); }
+.cta-tag { background: rgba(245, 158, 11, 0.2); color: #fde047; border: 1px solid rgba(245, 158, 11, 0.4); }
+
+/* Reels Timeline Grid */
+.cs-timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.cs-timeline-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.timeline-time {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--accent-3);
+    letter-spacing: 0.5px;
+}
+
+.timeline-role {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.timeline-role i { color: #00A14B; }
+
+.cs-timeline-card p {
+    font-size: 0.74rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    margin: 0;
+}
+
+/* Hero Specialty Pills */
+.hero-specialty-pills {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.specialty-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.specialty-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-light);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: all 0.25s var(--ease-out);
+    cursor: pointer;
+}
+
+.specialty-pill:hover {
+    background: rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.35);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.specialty-pill.pill-marketing {
+    background: rgba(0, 161, 75, 0.12);
+    border-color: rgba(0, 161, 75, 0.35);
+    color: #6ee7b7;
+}
+
+.specialty-pill.pill-marketing:hover {
+    background: rgba(0, 161, 75, 0.25);
+    border-color: #00A14B;
+    color: #fff;
 }
 
 .case-study-modal-backdrop.active .case-study-modal-box {
