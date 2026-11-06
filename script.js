@@ -495,19 +495,87 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ============ Image Lightbox Modal (HASANI 5 Slide Desain) ============
+    // ============ Image Lightbox Modal (HASANI 6 Desain Poster Promosi) ============
     const imageModal = document.getElementById('imageModal');
     const closeImageModalBtn = document.getElementById('closeImageModal');
-    const openCarouselModal = document.getElementById('openCarouselModal');
     const viewSlideBtn = document.getElementById('viewSlideBtn');
     const imageModalImg = document.getElementById('imageModalImg');
     const toggleZoomBtn = document.getElementById('toggleZoomBtn');
     const zoomBtnText = document.getElementById('zoomBtnText');
     const zoomBtnIcon = document.getElementById('zoomBtnIcon');
     const imageModalBody = document.getElementById('imageModalBody');
+    const imageModalTitle = document.getElementById('imageModalTitle');
+    const imageModalDesc = document.getElementById('imageModalDesc');
+    const imageModalBadge = document.getElementById('imageModalBadge');
+    const modalPosterPrev = document.getElementById('modalPosterPrev');
+    const modalPosterNext = document.getElementById('modalPosterNext');
 
-    function openImageModal() {
+    const hasaniPostersData = [
+        {
+            src: 'images/1.jpeg',
+            alt: 'Poster 1 HASANI - Direct Response Promo Rp99K',
+            title: 'Poster 01 • Direct Response Promo Rp99K',
+            desc: 'Framework: Headline Hook • Penawaran Spesial Rp99.000, BPOM TR233044221 & Order via Toko BAIK'
+        },
+        {
+            src: 'images/2.jpeg',
+            alt: 'Poster 2 HASANI - Solusi Alami Kesehatan & Stamina Keluarga',
+            title: 'Poster 02 • Solusi Kesehatan & Stamina Keluarga',
+            desc: 'Framework: Benefit Checklist • Formulasi Habbatussauda + Brazilian Propolis • BPOM TR233044221'
+        },
+        {
+            src: 'images/3.jpeg',
+            alt: 'Poster 3 HASANI - Kembalikan Vitalitas & Jaga Stamina Aktif',
+            title: 'Poster 03 • Kembalikan Vitalitas & Jaga Stamina Aktif',
+            desc: 'Framework: Emotional Desire • Gaya Hidup Aktif & Bebas Pegal/Lelah dengan 100% Herbal Alami'
+        },
+        {
+            src: 'images/4.jpeg',
+            alt: 'Poster 4 HASANI - Jaga Stamina & Imunitas Bundling 2 Botol',
+            title: 'Poster 04 • Bundling Hemat 2 Botol (Rp189.000)',
+            desc: 'Framework: Sales Offer • Paket Perlindungan Imunitas Keluarga + Bonus Biotawa & Bebas Ongkir'
+        },
+        {
+            src: 'images/5.jpeg',
+            alt: 'Poster 5 HASANI - Mahakarya Dari Alam Pulihkan Energi',
+            title: 'Poster 05 • Cinematic Nature Branding',
+            desc: 'Framework: Brand Authority • Mahakarya dari Alam untuk Pulihkan Energi Alami Tubuh'
+        },
+        {
+            src: 'images/6.jpeg',
+            alt: 'Poster 6 HASANI - Solusi Sehat & Kemudahan Keluarga',
+            title: 'Poster 06 • Paket Keluarga Sehat (3 Botol)',
+            desc: 'Framework: Family Solution • Suplemen Herbal Rutin Jangka Panjang untuk Seluruh Anggota Keluarga'
+        }
+    ];
+
+    let currentModalPosterIndex = 0;
+
+    function renderModalPoster(index) {
+        if (!hasaniPostersData.length) return;
+        currentModalPosterIndex = (index + hasaniPostersData.length) % hasaniPostersData.length;
+        const poster = hasaniPostersData[currentModalPosterIndex];
+        if (imageModalImg) {
+            imageModalImg.src = poster.src;
+            imageModalImg.alt = poster.alt;
+        }
+        if (imageModalTitle) {
+            imageModalTitle.textContent = poster.title;
+        }
+        if (imageModalDesc) {
+            imageModalDesc.textContent = poster.desc;
+        }
+        if (imageModalBadge) {
+            imageModalBadge.textContent = `Poster ${currentModalPosterIndex + 1} dari ${hasaniPostersData.length}`;
+        }
+        if (imageModalBody) {
+            imageModalBody.scrollTop = 0;
+        }
+    }
+
+    function openImageModal(initialIndex = 0) {
         if (!imageModal) return;
+        renderModalPoster(initialIndex);
         imageModal.classList.add('active');
         imageModal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
@@ -532,7 +600,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!imageModalImg) return;
         const isZoomed = imageModalImg.classList.toggle('zoomed');
         if (isZoomed) {
-            if (zoomBtnText) zoomBtnText.textContent = 'Fit Layar (Semua Slide)';
+            if (zoomBtnText) zoomBtnText.textContent = 'Fit Layar (Semua Poster)';
             if (zoomBtnIcon) {
                 zoomBtnIcon.className = 'fas fa-compress-arrows-alt';
             }
@@ -545,37 +613,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if (openCarouselModal) {
-        openCarouselModal.addEventListener('click', () => {
-            if (imageModalImg) imageModalImg.src = 'images/5 slide desain.jpg';
-            const modalTitle = document.getElementById('imageModalTitle');
-            if (modalTitle) modalTitle.textContent = 'HASANI Herbal — 5 Slide Desain Carousel Instagram';
-            openImageModal();
-        });
-    }
     if (viewSlideBtn) {
         viewSlideBtn.addEventListener('click', () => {
-            if (imageModalImg) imageModalImg.src = 'images/5 slide desain.jpg';
-            const modalTitle = document.getElementById('imageModalTitle');
-            if (modalTitle) modalTitle.textContent = 'HASANI Herbal — 5 Slide Desain Carousel Instagram';
-            openImageModal();
+            openImageModal(currentHasaniSlide || 0);
         });
     }
 
-    // Click individual slide to open high-res lightbox
-    document.querySelectorAll('.hasani-slide .slide-visual-card').forEach((card, idx) => {
-        card.addEventListener('click', () => {
-            const img = card.querySelector('img');
-            if (img && imageModalImg) {
-                imageModalImg.src = img.src;
-                const modalTitle = document.getElementById('imageModalTitle');
-                if (modalTitle) {
-                    modalTitle.textContent = `HASANI Herbal — Slide ${idx + 1} dari 5 (Desain Instagram)`;
-                }
-                openImageModal();
-            }
+    // Modal Prev & Next Navigation
+    if (modalPosterPrev) {
+        modalPosterPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            renderModalPoster(currentModalPosterIndex - 1);
+        });
+    }
+
+    if (modalPosterNext) {
+        modalPosterNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            renderModalPoster(currentModalPosterIndex + 1);
+        });
+    }
+
+    // Click individual slide to open in modal at that index
+    document.querySelectorAll('.hasani-slide').forEach((slide, idx) => {
+        slide.addEventListener('click', () => {
+            openImageModal(idx);
         });
     });
+
     if (closeImageModalBtn) {
         closeImageModalBtn.addEventListener('click', closeImageModal);
     }
@@ -592,10 +657,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && imageModal.classList.contains('active')) {
-                closeImageModal();
+            if (imageModal.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    closeImageModal();
+                } else if (e.key === 'ArrowLeft') {
+                    renderModalPoster(currentModalPosterIndex - 1);
+                } else if (e.key === 'ArrowRight') {
+                    renderModalPoster(currentModalPosterIndex + 1);
+                }
             }
         });
+    }
+
+    // Touch Swipe Gesture Support for Modal Body
+    if (imageModalBody) {
+        let modalTouchStartX = 0;
+        let modalTouchEndX = 0;
+        imageModalBody.addEventListener('touchstart', (e) => {
+            modalTouchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        imageModalBody.addEventListener('touchend', (e) => {
+            modalTouchEndX = e.changedTouches[0].screenX;
+            const threshold = 40;
+            if (modalTouchEndX < modalTouchStartX - threshold) {
+                renderModalPoster(currentModalPosterIndex + 1);
+            } else if (modalTouchEndX > modalTouchStartX + threshold) {
+                renderModalPoster(currentModalPosterIndex - 1);
+            }
+        }, { passive: true });
     }
 
     // ============ Video Lightbox Modal (HASANI 9:16 Reels) ============
@@ -648,7 +737,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ============ HASANI Interactive 5-Slide Carousel ============
+    // ============ HASANI Interactive 6-Poster Carousel ============
     const hasaniSliderTrack = document.getElementById('hasaniSliderTrack');
     const hasaniSlides = document.querySelectorAll('.hasani-slide');
     const sliderPrevBtn = document.getElementById('sliderPrevBtn');
@@ -658,7 +747,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hasaniSliderViewport = document.getElementById('hasaniSliderViewport');
 
     let currentHasaniSlide = 0;
-    const totalHasaniSlides = hasaniSlides.length || 5;
+    const totalHasaniSlides = hasaniSlides.length || 6;
 
     function goToHasaniSlide(index) {
         if (!hasaniSliderTrack) return;
@@ -670,9 +759,9 @@ document.addEventListener('DOMContentLoaded', () => {
             dot.classList.toggle('active', idx === currentHasaniSlide);
         });
 
-        // Update counter "Slide X / 5"
+        // Update counter "Poster X / 6"
         if (carouselCounter) {
-            carouselCounter.textContent = `Slide ${currentHasaniSlide + 1} / ${totalHasaniSlides}`;
+            carouselCounter.textContent = `Poster ${currentHasaniSlide + 1} / ${totalHasaniSlides}`;
         }
     }
 

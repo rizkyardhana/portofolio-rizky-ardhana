@@ -3598,11 +3598,29 @@ a.contact-card-value:hover {
     min-width: 240px;
 }
 
+.image-modal-header-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 3px;
+}
+
 .image-modal-title {
     font-size: 1.05rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 3px;
+    margin-bottom: 0;
+}
+
+.image-modal-counter-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #34d399;
+    background: rgba(16, 185, 129, 0.18);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    padding: 2px 9px;
+    border-radius: var(--radius-full);
 }
 
 .image-modal-desc {
@@ -3632,6 +3650,7 @@ a.contact-card-value:hover {
 }
 
 .image-modal-body {
+    position: relative;
     flex: 1;
     min-height: 0;
     padding: 16px;
@@ -3642,6 +3661,42 @@ a.contact-card-value:hover {
     align-items: center;
     justify-content: flex-start;
     background: #06070a;
+}
+
+/* Modal Navigation Buttons (Previous / Next Poster) */
+.image-modal-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(10, 14, 25, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 25;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.image-modal-nav-btn.prev {
+    left: 20px;
+}
+
+.image-modal-nav-btn.next {
+    right: 20px;
+}
+
+.image-modal-nav-btn:hover {
+    background: #00A14B;
+    border-color: #00A14B;
+    transform: translateY(-50%) scale(1.1);
 }
 
 /* Default Fit Mode: The whole 5-slide poster fits in the screen without scrolling or cut-off */
@@ -3962,12 +4017,12 @@ a.contact-card-value:hover {
 
 /* 3. Custom Reels Phone Player (9:16) */
 .reels-player-wrapper {
-    width: 185px;
+    width: 195px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    height: 380px;
+    height: 420px;
     justify-content: space-between;
 }
 
@@ -3994,7 +4049,7 @@ a.contact-card-value:hover {
 .reels-phone-mockup {
     position: relative;
     width: 100%;
-    height: 340px;
+    height: 376px;
     border-radius: 20px;
     overflow: hidden;
     background: #000;
@@ -4085,11 +4140,11 @@ a.contact-card-value:hover {
     background: #00A14B;
 }
 
-/* 4. Interactive 5-Slide Carousel Slider */
+/* 4. Interactive 6-Poster Carousel Slider */
 .hasani-carousel-wrapper {
     flex: 1;
     min-width: 0;
-    height: 380px;
+    height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -4886,21 +4941,50 @@ a.contact-card-value:hover {
         align-items: center !important;
         border-right: none !important;
         border-bottom: 1px solid var(--border-subtle) !important;
-        padding: 20px 16px !important;
-        gap: 20px !important;
+        padding: 24px 16px !important;
+        gap: 22px !important;
     }
     .reels-player-wrapper {
         width: 100% !important;
-        max-width: 210px !important;
+        max-width: 220px !important;
         height: auto !important;
     }
     .reels-phone-mockup {
-        height: 360px !important;
+        height: 380px !important;
     }
     .hasani-carousel-wrapper {
         width: 100% !important;
-        max-width: 440px !important;
-        height: 360px !important;
+        max-width: 380px !important;
+        height: 440px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hasani-card-layout .project-media-showcase {
+        padding: 18px 12px !important;
+        gap: 18px !important;
+    }
+    .hasani-carousel-wrapper {
+        max-width: 100% !important;
+        height: 410px !important;
+        padding: 10px 10px !important;
+    }
+    .reels-player-wrapper {
+        max-width: 200px !important;
+    }
+    .reels-phone-mockup {
+        height: 345px !important;
+    }
+    .image-modal-nav-btn {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 0.9rem !important;
+    }
+    .image-modal-nav-btn.prev {
+        left: 8px !important;
+    }
+    .image-modal-nav-btn.next {
+        right: 8px !important;
     }
 }
 
